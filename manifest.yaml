@@ -1,0 +1,31 @@
+version: 1.0.0
+name: software-engineering-best-practice-skills
+purpose: Agent-consumable software engineering best-practice skills for AI coding
+  agents.
+format: Agent Skills SKILL.md
+skill_count: 141
+categories:
+- slug: engineering-thinking
+  skill_count: 10
+- slug: code-construction
+  skill_count: 15
+- slug: object-oriented-design
+  skill_count: 11
+- slug: design-principles-and-modularity
+  skill_count: 13
+- slug: design-patterns
+  skill_count: 12
+- slug: refactoring
+  skill_count: 12
+- slug: architecture
+  skill_count: 12
+- slug: testing
+  skill_count: 11
+- slug: reliability
+  skill_count: 11
+- slug: data-and-distributed-systems
+  skill_count: 12
+- slug: engineering-process-and-delivery
+  skill_count: 12
+- slug: technical-leadership
+  skill_count: 10

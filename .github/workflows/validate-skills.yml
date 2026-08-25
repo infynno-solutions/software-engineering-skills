@@ -1,0 +1,17 @@
+name: Validate Agent Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate skill structure
+        run: python3 scripts/validate-skills.py
+      - name: Validate with GitHub skill publisher
+        if: ${{ env.ACT != 'true' }}
+        run: gh skill publish --dry-run
