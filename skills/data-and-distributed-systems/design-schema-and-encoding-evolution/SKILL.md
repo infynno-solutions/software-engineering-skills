@@ -1,6 +1,7 @@
 ---
 name: design-schema-and-encoding-evolution
-description: Treat data schemas and encoded records as compatibility boundaries that must evolve safely across time and versions. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat data schemas and encoded records as compatibility boundaries that must evolve safely across time and versions. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Schema and Encoding Evolution

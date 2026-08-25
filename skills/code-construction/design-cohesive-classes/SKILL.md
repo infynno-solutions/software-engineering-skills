@@ -1,6 +1,7 @@
 ---
 name: design-cohesive-classes
-description: Organize data and behavior into classes that have a focused, well-defined responsibility and an interface that allows consumers to ignore unnecessary internals. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Organize data and behavior into classes that have a focused, well-defined responsibility and an interface that allows consumers to ignore unnecessary internals. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Cohesive Classes

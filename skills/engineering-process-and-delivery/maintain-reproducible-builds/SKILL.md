@@ -1,6 +1,7 @@
 ---
 name: maintain-reproducible-builds
-description: Ensure builds and their inputs are explicit, deterministic where practical, and reconstructable by another developer or environment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Ensure builds and their inputs are explicit, deterministic where practical, and reconstructable by another developer or environment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Maintain Reproducible Builds

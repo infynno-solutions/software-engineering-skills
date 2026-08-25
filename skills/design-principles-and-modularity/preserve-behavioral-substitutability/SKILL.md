@@ -1,6 +1,7 @@
 ---
 name: preserve-behavioral-substitutability
-description: Require replacements behind an abstraction to honor the behavioral expectations clients rely on, not merely the method signatures. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Require replacements behind an abstraction to honor the behavioral expectations clients rely on, not merely the method signatures. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Preserve Behavioral Substitutability

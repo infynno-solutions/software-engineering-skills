@@ -1,6 +1,7 @@
 ---
 name: continuously-improve-code-quality
-description: Treat every meaningful code change as an opportunity to preserve or improve the codebase's readability, correctness, and maintainability rather than allowing entropy to accumulate. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat every meaningful code change as an opportunity to preserve or improve the codebase's readability, correctness, and maintainability rather than allowing entropy to accumulate. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Continuously Improve Code Quality

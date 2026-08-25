@@ -1,6 +1,7 @@
 ---
 name: use-test-doubles-selectively
-description: Use fakes, mocks, stubs, or real implementations according to the boundary and cost; avoid doubles that make tests brittle or unfaithful. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use fakes, mocks, stubs, or real implementations according to the boundary and cost; avoid doubles that make tests brittle or unfaithful. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Test Doubles Selectively

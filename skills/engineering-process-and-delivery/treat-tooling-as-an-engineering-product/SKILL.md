@@ -1,6 +1,7 @@
 ---
 name: treat-tooling-as-an-engineering-product
-description: Design developer tools for usability, reliability, maintainability, feedback, and measurable engineering impact. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Design developer tools for usability, reliability, maintainability, feedback, and measurable engineering impact. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Treat Tooling as an Engineering Product

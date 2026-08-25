@@ -1,6 +1,7 @@
 ---
 name: use-continuous-testing-and-feedback
-description: Run the right tests at the right workflow stages to provide timely evidence about whether a change is safe to progress. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Run the right tests at the right workflow stages to provide timely evidence about whether a change is safe to progress. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Continuous Testing and Feedback

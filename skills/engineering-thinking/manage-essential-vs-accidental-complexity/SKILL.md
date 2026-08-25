@@ -1,6 +1,7 @@
 ---
 name: manage-essential-vs-accidental-complexity
-description: Distinguish complexity inherent to the problem from complexity introduced by the chosen design, and actively reduce the latter. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Distinguish complexity inherent to the problem from complexity introduced by the chosen design, and actively reduce the latter. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Manage Essential vs Accidental Complexity

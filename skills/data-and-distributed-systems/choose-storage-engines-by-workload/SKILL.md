@@ -1,6 +1,7 @@
 ---
 name: choose-storage-engines-by-workload
-description: Select storage mechanisms based on workload shape, access patterns, latency, throughput, durability, and operational constraints. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Select storage mechanisms based on workload shape, access patterns, latency, throughput, durability, and operational constraints. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Choose Storage Engines by Workload

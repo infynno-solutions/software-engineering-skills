@@ -1,6 +1,7 @@
 ---
 name: reason-about-partial-failure
-description: Design with the assumption that some parts of a distributed system can fail while others continue running. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Design with the assumption that some parts of a distributed system can fail while others continue running. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Reason About Partial Failure

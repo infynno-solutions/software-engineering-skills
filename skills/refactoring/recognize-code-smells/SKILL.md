@@ -1,6 +1,7 @@
 ---
 name: recognize-code-smells
-description: Identify structural symptoms that make code harder to understand, test, or change, and use them as triggers for deeper investigation rather than automatic refactoring targets. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Identify structural symptoms that make code harder to understand, test, or change, and use them as triggers for deeper investigation rather than automatic refactoring targets. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Recognize Code Smells

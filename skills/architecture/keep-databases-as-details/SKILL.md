@@ -1,6 +1,7 @@
 ---
 name: keep-databases-as-details
-description: Keep persistence mechanisms behind application-facing abstractions when business rules should not depend on a particular database technology. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Keep persistence mechanisms behind application-facing abstractions when business rules should not depend on a particular database technology. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Keep Databases as Details

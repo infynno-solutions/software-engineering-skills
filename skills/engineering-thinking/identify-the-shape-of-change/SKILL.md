@@ -1,6 +1,7 @@
 ---
 name: identify-the-shape-of-change
-description: Identify what is likely to change independently and arrange the design so those changes do not unnecessarily propagate through unrelated parts of the system. This is a foundational reasoning skill for abstraction, modularity, architecture, and refactoring. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Identify what is likely to change independently and arrange the design so those changes do not unnecessarily propagate through unrelated parts of the system. This is a foundational reasoning skill for abstraction, modularity, architecture, and refactoring. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Identify the Shape of Change

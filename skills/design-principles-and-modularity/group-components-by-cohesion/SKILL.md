@@ -1,6 +1,7 @@
 ---
 name: group-components-by-cohesion
-description: Group classes into components according to shared change/reuse/release characteristics while respecting the tension between cohesion goals. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Group classes into components according to shared change/reuse/release characteristics while respecting the tension between cohesion goals. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Group Components by Cohesion

@@ -1,6 +1,7 @@
 ---
 name: take-technical-ownership
-description: Own technical outcomes end to end: clarify the problem, drive decisions, follow through on implementation, and surface risks early. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Own technical outcomes end to end: clarify the problem, drive decisions, follow through on implementation, and surface risks early. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Take Technical Ownership

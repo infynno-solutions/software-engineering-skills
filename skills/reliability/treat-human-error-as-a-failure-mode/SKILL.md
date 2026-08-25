@@ -1,6 +1,7 @@
 ---
 name: treat-human-error-as-a-failure-mode
-description: Constrain dangerous actions, automate repetitive operations, and build recovery mechanisms for operator mistakes. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Constrain dangerous actions, automate repetitive operations, and build recovery mechanisms for operator mistakes. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Treat Human Error as a Failure Mode

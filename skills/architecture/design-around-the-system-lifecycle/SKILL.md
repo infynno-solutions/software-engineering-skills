@@ -1,6 +1,7 @@
 ---
 name: design-around-the-system-lifecycle
-description: Treat development, deployment, operation, and maintenance as architectural concerns; optimize the architecture for the system’s lifetime, not merely initial correctness. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat development, deployment, operation, and maintenance as architectural concerns; optimize the architecture for the system’s lifetime, not merely initial correctness. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Around the System Lifecycle

@@ -1,6 +1,7 @@
 ---
 name: design-dataflow-and-derived-state
-description: Make transformations, materialized views, caches, and derived data explicit so correctness and rebuild paths can be reasoned about. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make transformations, materialized views, caches, and derived data explicit so correctness and rebuild paths can be reasoned about. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Dataflow and Derived State

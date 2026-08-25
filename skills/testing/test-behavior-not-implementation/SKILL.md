@@ -1,6 +1,7 @@
 ---
 name: test-behavior-not-implementation
-description: Assert externally meaningful behavior and contracts rather than locking tests to incidental internal structure. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Assert externally meaningful behavior and contracts rather than locking tests to incidental internal structure. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Test Behavior, Not Implementation

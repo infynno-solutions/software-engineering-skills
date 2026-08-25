@@ -1,6 +1,7 @@
 ---
 name: automate-quality-gates-and-delivery
-description: Automate repeatable verification and release steps so delivery relies less on manual memory and intervention. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Automate repeatable verification and release steps so delivery relies less on manual memory and intervention. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Automate Quality Gates and Delivery

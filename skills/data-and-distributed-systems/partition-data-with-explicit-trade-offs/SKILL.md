@@ -1,6 +1,7 @@
 ---
 name: partition-data-with-explicit-trade-offs
-description: Partition data to scale load and ownership while accounting for hot spots, rebalancing, routing, and cross-partition operations. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Partition data to scale load and ownership while accounting for hot spots, rebalancing, routing, and cross-partition operations. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Partition Data With Explicit Trade-offs

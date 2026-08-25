@@ -1,6 +1,7 @@
 ---
 name: apply-defensive-programming
-description: Make incorrect assumptions, invalid inputs, and unexpected states fail in controlled and diagnosable ways rather than silently propagating corruption. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make incorrect assumptions, invalid inputs, and unexpected states fail in controlled and diagnosable ways rather than silently propagating corruption. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Apply Defensive Programming

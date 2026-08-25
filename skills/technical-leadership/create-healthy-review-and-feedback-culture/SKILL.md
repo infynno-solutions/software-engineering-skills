@@ -1,6 +1,7 @@
 ---
 name: create-healthy-review-and-feedback-culture
-description: Make feedback specific, respectful, technically grounded, and oriented toward learning and code quality. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make feedback specific, respectful, technically grounded, and oriented toward learning and code quality. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Create Healthy Review and Feedback Culture

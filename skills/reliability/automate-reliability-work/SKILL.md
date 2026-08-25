@@ -1,6 +1,7 @@
 ---
 name: automate-reliability-work
-description: Automate testing, deployment, verification, recovery, and repetitive operational tasks where automation reduces human error and improves repeatability. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Automate testing, deployment, verification, recovery, and repetitive operational tasks where automation reduces human error and improves repeatability. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Automate Reliability Work

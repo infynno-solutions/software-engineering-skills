@@ -1,6 +1,7 @@
 ---
 name: encapsulate-implementation-details
-description: Expose only what consumers need to use a component and hide representations and mechanisms that may change independently. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Expose only what consumers need to use a component and hide representations and mechanisms that may change independently. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Encapsulate Implementation Details

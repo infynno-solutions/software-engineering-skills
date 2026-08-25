@@ -1,6 +1,7 @@
 ---
 name: write-clear-maintainable-tests
-description: Make tests concise, understandable, behavior-focused, and diagnostically useful when they fail. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make tests concise, understandable, behavior-focused, and diagnostically useful when they fail. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Write Clear Maintainable Tests

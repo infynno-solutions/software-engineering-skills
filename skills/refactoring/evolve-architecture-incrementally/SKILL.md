@@ -1,6 +1,7 @@
 ---
 name: evolve-architecture-incrementally
-description: Improve architectural structure through bounded, incremental changes informed by real experience rather than waiting for a perfect redesign. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Improve architectural structure through bounded, incremental changes informed by real experience rather than waiting for a perfect redesign. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Evolve Architecture Incrementally

@@ -1,6 +1,7 @@
 ---
 name: use-automated-refactoring-tools-when-safe
-description: Prefer syntax-aware, semantics-aware refactoring tools when they can safely express the intended change, while verifying tool limitations and running tests. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Prefer syntax-aware, semantics-aware refactoring tools when they can safely express the intended change, while verifying tool limitations and running tests. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Automated Refactoring Tools When Safe

@@ -1,6 +1,7 @@
 ---
 name: separate-policy-from-details
-description: Keep business rules and application policy insulated from volatile mechanisms such as UI, frameworks, databases, and infrastructure. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Keep business rules and application policy insulated from volatile mechanisms such as UI, frameworks, databases, and infrastructure. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Separate Policy From Details

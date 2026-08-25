@@ -1,6 +1,7 @@
 ---
 name: keep-control-flow-understandable
-description: Structure conditionals, loops, and exceptional paths so that the normal execution path is clear and unusual cases do not obscure the main behavior. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Structure conditionals, loops, and exceptional paths so that the normal execution path is clear and unusual cases do not obscure the main behavior. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Keep Control Flow Understandable

@@ -1,6 +1,7 @@
 ---
 name: manage-dependencies-explicitly
-description: Track direct and transitive dependencies, versions, ownership, and compatibility risk instead of relying on implicit environmental state. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Track direct and transitive dependencies, versions, ownership, and compatibility risk instead of relying on implicit environmental state. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Manage Dependencies Explicitly

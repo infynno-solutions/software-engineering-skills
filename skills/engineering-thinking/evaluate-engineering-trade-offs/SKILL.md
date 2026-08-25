@@ -1,6 +1,7 @@
 ---
 name: evaluate-engineering-trade-offs
-description: Compare viable engineering alternatives explicitly instead of treating a preferred technique as universally correct. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Compare viable engineering alternatives explicitly instead of treating a preferred technique as universally correct. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Evaluate Engineering Trade-offs

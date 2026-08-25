@@ -1,6 +1,7 @@
 ---
 name: remove-team-roadblocks
-description: Identify constraints that prevent engineers from making progress and work to remove or reduce them. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Identify constraints that prevent engineers from making progress and work to remove or reduce them. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Remove Team Roadblocks

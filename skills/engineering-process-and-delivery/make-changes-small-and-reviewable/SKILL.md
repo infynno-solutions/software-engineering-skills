@@ -1,6 +1,7 @@
 ---
 name: make-changes-small-and-reviewable
-description: Package work into coherent, reviewable changes that are easy to understand, test, revert, and integrate. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Package work into coherent, reviewable changes that are easy to understand, test, revert, and integrate. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Make Changes Small and Reviewable

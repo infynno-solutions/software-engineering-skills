@@ -1,6 +1,7 @@
 ---
 name: manage-abstraction-debt
-description: Treat abstractions as design investments: introduce them when they pay for real variation or dependency control, and remove abstractions that add more complexity than value. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat abstractions as design investments: introduce them when they pay for real variation or dependency control, and remove abstractions that add more complexity than value. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Manage Abstraction Debt

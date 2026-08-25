@@ -1,6 +1,7 @@
 ---
 name: defer-decisions-when-uncertainty-is-high
-description: Avoid irreversible or expensive commitments when the relevant requirements, constraints, or change patterns are not yet well understood. The goal is not indecision. The goal is to preserve useful options until evidence justifies commitment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Avoid irreversible or expensive commitments when the relevant requirements, constraints, or change patterns are not yet well understood. The goal is not indecision. The goal is to preserve useful options until evidence justifies commitment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Defer Decisions When Uncertainty Is High

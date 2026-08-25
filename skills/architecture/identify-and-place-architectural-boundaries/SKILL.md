@@ -1,6 +1,7 @@
 ---
 name: identify-and-place-architectural-boundaries
-description: Draw boundaries where independent change, ownership, testability, or deployment justify separation; do not create boundaries merely for visual structure. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Draw boundaries where independent change, ownership, testability, or deployment justify separation; do not create boundaries merely for visual structure. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Identify and Place Architectural Boundaries

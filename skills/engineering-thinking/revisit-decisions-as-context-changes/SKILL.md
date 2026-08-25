@@ -1,6 +1,7 @@
 ---
 name: revisit-decisions-as-context-changes
-description: Treat engineering decisions as contextual rather than permanent truths. Re-evaluate them when requirements, workload, team structure, operational constraints, evidence, or system age materially changes. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat engineering decisions as contextual rather than permanent truths. Re-evaluate them when requirements, workload, team structure, operational constraints, evidence, or system age materially changes. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Revisit Decisions as Context Changes

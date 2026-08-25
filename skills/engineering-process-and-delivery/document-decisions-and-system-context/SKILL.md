@@ -1,6 +1,7 @@
 ---
 name: document-decisions-and-system-context
-description: Record rationale, constraints, interfaces, and operational context where future engineers would otherwise need tribal knowledge. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Record rationale, constraints, interfaces, and operational context where future engineers would otherwise need tribal knowledge. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Document Decisions and System Context

@@ -1,6 +1,7 @@
 ---
 name: design-teams-and-work-for-scale
-description: Partition problem spaces, ownership, and decision-making so teams can operate effectively as systems and organizations grow. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Partition problem spaces, ownership, and decision-making so teams can operate effectively as systems and organizations grow. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Teams and Work for Scale

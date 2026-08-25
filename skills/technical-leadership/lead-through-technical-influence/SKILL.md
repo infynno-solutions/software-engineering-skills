@@ -1,6 +1,7 @@
 ---
 name: lead-through-technical-influence
-description: Lead through clear reasoning, credibility, service to the team, and influence rather than relying on hierarchy. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Lead through clear reasoning, credibility, service to the team, and influence rather than relying on hierarchy. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Lead Through Technical Influence

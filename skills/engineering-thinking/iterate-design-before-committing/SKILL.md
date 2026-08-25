@@ -1,6 +1,7 @@
 ---
 name: iterate-design-before-committing
-description: Treat design as an iterative engineering activity: explore alternatives, compare them, test important assumptions, and refine the solution before making an expensive commitment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat design as an iterative engineering activity: explore alternatives, compare them, test important assumptions, and refine the solution before making an expensive commitment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Iterate Design Before Committing

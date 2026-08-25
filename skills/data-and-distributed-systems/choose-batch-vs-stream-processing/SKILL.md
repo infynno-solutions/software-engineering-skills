@@ -1,6 +1,7 @@
 ---
 name: choose-batch-vs-stream-processing
-description: Choose batch, stream, or hybrid processing according to latency, completeness, recomputation, state, and operational requirements. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Choose batch, stream, or hybrid processing according to latency, completeness, recomputation, state, and operational requirements. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Choose Batch vs Stream Processing

@@ -1,6 +1,7 @@
 ---
 name: design-testable-architecture
-description: Make core policy executable and verifiable without requiring the full delivery mechanism, database, or external environment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make core policy executable and verifiable without requiring the full delivery mechanism, database, or external environment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Testable Architecture

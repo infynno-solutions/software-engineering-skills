@@ -1,6 +1,7 @@
 ---
 name: degrade-gracefully
-description: When full functionality is unavailable, preserve correctness and useful partial behavior rather than failing unpredictably. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "When full functionality is unavailable, preserve correctness and useful partial behavior rather than failing unpredictably. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Degrade Gracefully

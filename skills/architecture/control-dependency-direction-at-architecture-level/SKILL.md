@@ -1,6 +1,7 @@
 ---
 name: control-dependency-direction-at-architecture-level
-description: Arrange source dependencies so high-level policy remains independent of volatile details and dependency arrows follow intended stability. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Arrange source dependencies so high-level policy remains independent of volatile details and dependency arrows follow intended stability. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Control Dependency Direction at Architecture Level

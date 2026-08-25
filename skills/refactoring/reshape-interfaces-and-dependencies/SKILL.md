@@ -1,6 +1,7 @@
 ---
 name: reshape-interfaces-and-dependencies
-description: Change signatures, ownership, and dependency structure to create cleaner seams without hiding a broader design problem. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Change signatures, ownership, and dependency structure to create cleaner seams without hiding a broader design problem. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Reshape Interfaces and Dependencies

@@ -1,6 +1,7 @@
 ---
 name: keep-frameworks-as-details
-description: Treat frameworks as tools at the edge of the system rather than allowing framework concepts to become the business model. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat frameworks as tools at the edge of the system rather than allowing framework concepts to become the business model. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Keep Frameworks as Details

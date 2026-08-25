@@ -1,6 +1,7 @@
 ---
 name: control-coupling-across-boundaries
-description: Minimize the amount of knowledge and implementation detail crossing module/component boundaries. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Minimize the amount of knowledge and implementation detail crossing module/component boundaries. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Control Coupling Across Boundaries

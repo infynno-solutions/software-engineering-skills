@@ -1,6 +1,7 @@
 ---
 name: separate-responsibilities-by-reason-to-change
-description: Separate responsibilities when they have materially different reasons for change. Identify the actors, policies, or concerns that can change independently and avoid forcing unrelated changes through the same module. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Separate responsibilities when they have materially different reasons for change. Identify the actors, policies, or concerns that can change independently and avoid forcing unrelated changes through the same module. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Separate Responsibilities by Reason to Change

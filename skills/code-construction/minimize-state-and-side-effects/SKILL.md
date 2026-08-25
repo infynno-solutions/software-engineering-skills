@@ -1,6 +1,7 @@
 ---
 name: minimize-state-and-side-effects
-description: Reduce hidden state changes and side effects that make behavior difficult to reason about, test, compose, or modify. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Reduce hidden state changes and side effects that make behavior difficult to reason about, test, compose, or modify. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Minimize State and Side Effects

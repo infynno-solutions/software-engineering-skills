@@ -1,6 +1,7 @@
 ---
 name: design-for-testability
-description: Design components so important behavior can be exercised in isolation or through controlled boundaries without invasive setup. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Design components so important behavior can be exercised in isolation or through controlled boundaries without invasive setup. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design for Testability

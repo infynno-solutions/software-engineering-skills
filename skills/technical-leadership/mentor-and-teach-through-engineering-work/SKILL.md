@@ -1,6 +1,7 @@
 ---
 name: mentor-and-teach-through-engineering-work
-description: Use reviews, design discussions, documentation, pairing, and examples to increase team capability. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use reviews, design discussions, documentation, pairing, and examples to increase team capability. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Mentor and Teach Through Engineering Work

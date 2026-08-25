@@ -1,6 +1,7 @@
 ---
 name: use-logs-events-and-change-data-capture-deliberately
-description: Use immutable logs, event streams, or change-data-capture when they provide useful integration, auditability, replay, or derived-state capabilities. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use immutable logs, event streams, or change-data-capture when they provide useful integration, auditability, replay, or derived-state capabilities. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Logs, Events, and Change Data Capture Deliberately

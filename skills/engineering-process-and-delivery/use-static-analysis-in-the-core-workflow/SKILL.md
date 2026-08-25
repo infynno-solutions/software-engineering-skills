@@ -1,6 +1,7 @@
 ---
 name: use-static-analysis-in-the-core-workflow
-description: Integrate useful automated analyses into editing, review, and submission workflows, emphasizing actionable signal quality. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Integrate useful automated analyses into editing, review, and submission workflows, emphasizing actionable signal quality. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Static Analysis in the Core Workflow

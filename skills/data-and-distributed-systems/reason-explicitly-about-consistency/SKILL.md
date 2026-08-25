@@ -1,6 +1,7 @@
 ---
 name: reason-explicitly-about-consistency
-description: State what consistency guarantee clients require and design around the actual guarantee rather than vague claims of "strong" or "eventual" consistency. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "State what consistency guarantee clients require and design around the actual guarantee rather than vague claims of \"strong\" or \"eventual\" consistency. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Reason Explicitly About Consistency

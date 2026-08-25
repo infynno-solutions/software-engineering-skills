@@ -1,6 +1,7 @@
 ---
 name: keep-changes-localized
-description: Structure code so common changes touch a small, coherent region rather than rippling through unrelated modules. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Structure code so common changes touch a small, coherent region rather than rippling through unrelated modules. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Keep Changes Localized

@@ -1,6 +1,7 @@
 ---
 name: remove-duplication-with-care
-description: Remove harmful duplication when it creates divergent maintenance burden, but preserve intentional duplication when sharing would create stronger coupling. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Remove harmful duplication when it creates divergent maintenance burden, but preserve intentional duplication when sharing would create stronger coupling. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Remove Duplication With Care

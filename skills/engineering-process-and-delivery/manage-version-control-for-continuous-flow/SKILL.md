@@ -1,6 +1,7 @@
 ---
 name: manage-version-control-for-continuous-flow
-description: Use version-control practices that keep work integrated, understandable, and reversible while minimizing long-lived divergence. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use version-control practices that keep work integrated, understandable, and reversible while minimizing long-lived divergence. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Manage Version Control for Continuous Flow

@@ -1,6 +1,7 @@
 ---
 name: design-for-failure
-description: Assume hardware, software, network, dependency, and human failures will occur and design explicit detection, containment, and recovery behavior. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Assume hardware, software, network, dependency, and human failures will occur and design explicit detection, containment, and recovery behavior. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design for Failure

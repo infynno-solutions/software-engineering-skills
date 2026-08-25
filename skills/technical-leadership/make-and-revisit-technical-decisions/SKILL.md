@@ -1,6 +1,7 @@
 ---
 name: make-and-revisit-technical-decisions
-description: Make timely decisions using available evidence, expose assumptions, and revisit them when new information changes the trade-offs. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make timely decisions using available evidence, expose assumptions, and revisit them when new information changes the trade-offs. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Make and Revisit Technical Decisions

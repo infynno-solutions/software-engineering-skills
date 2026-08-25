@@ -1,6 +1,7 @@
 ---
 name: design-for-recovery
-description: Treat restart, rebuild, failover, replay, and restoration paths as first-class design concerns. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat restart, rebuild, failover, replay, and restoration paths as first-class design concerns. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design for Recovery

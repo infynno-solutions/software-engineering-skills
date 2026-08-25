@@ -1,6 +1,7 @@
 ---
 name: use-continuous-integration
-description: Continuously assemble and test the evolving ecosystem, including important external and cross-service dependencies. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Continuously assemble and test the evolving ecosystem, including important external and cross-service dependencies. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Continuous Integration

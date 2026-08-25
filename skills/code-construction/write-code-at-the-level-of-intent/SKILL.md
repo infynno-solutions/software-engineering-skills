@@ -1,6 +1,7 @@
 ---
 name: write-code-at-the-level-of-intent
-description: Make source code communicate what the system is trying to accomplish without forcing the reader to reconstruct the design from low-level implementation details. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make source code communicate what the system is trying to accomplish without forcing the reader to reconstruct the design from low-level implementation details. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Write Code at the Level of Intent

@@ -1,6 +1,7 @@
 ---
 name: simplify-conditional-logic
-description: Reduce difficult-to-read branching by simplifying predicates, clarifying cases, extracting decisions, or changing the design when repeated variation indicates a deeper abstraction problem. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Reduce difficult-to-read branching by simplifying predicates, clarifying cases, extracting decisions, or changing the design when repeated variation indicates a deeper abstraction problem. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Simplify Conditional Logic

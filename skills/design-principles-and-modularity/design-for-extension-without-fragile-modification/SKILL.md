@@ -1,6 +1,7 @@
 ---
 name: design-for-extension-without-fragile-modification
-description: Use stable seams to accommodate foreseeable variation when modifying existing behavior repeatedly would spread risk. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use stable seams to accommodate foreseeable variation when modifying existing behavior repeatedly would spread risk. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design for Extension Without Fragile Modification

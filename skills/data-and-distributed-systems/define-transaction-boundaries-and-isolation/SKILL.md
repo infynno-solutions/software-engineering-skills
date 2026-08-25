@@ -1,6 +1,7 @@
 ---
 name: define-transaction-boundaries-and-isolation
-description: Use transactions where atomicity and isolation simplify correctness, and choose isolation levels based on anomalies the application can tolerate. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use transactions where atomicity and isolation simplify correctness, and choose isolation levels based on anomalies the application can tolerate. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Define Transaction Boundaries and Isolation

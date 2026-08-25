@@ -1,6 +1,7 @@
 ---
 name: design-for-independent-development
-description: Use components, interfaces, and dependency boundaries to let teams evolve areas independently without turning the architecture into an org-chart copy. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use components, interfaces, and dependency boundaries to let teams evolve areas independently without turning the architecture into an org-chart copy. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design for Independent Development

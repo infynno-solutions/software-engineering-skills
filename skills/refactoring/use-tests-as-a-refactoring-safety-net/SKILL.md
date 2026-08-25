@@ -1,6 +1,7 @@
 ---
 name: use-tests-as-a-refactoring-safety-net
-description: Establish meaningful automated tests around behavior before or during risky refactoring so regressions are detected quickly. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Establish meaningful automated tests around behavior before or during risky refactoring so regressions are detected quickly. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Tests as a Refactoring Safety Net

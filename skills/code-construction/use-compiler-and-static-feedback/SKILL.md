@@ -1,6 +1,7 @@
 ---
 name: use-compiler-and-static-feedback
-description: Use compiler diagnostics, type checking, linters, static analysis, and automated code-quality checks as part of the normal development loop rather than as optional cleanup. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use compiler diagnostics, type checking, linters, static analysis, and automated code-quality checks as part of the normal development loop rather than as optional cleanup. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Compiler and Static Feedback

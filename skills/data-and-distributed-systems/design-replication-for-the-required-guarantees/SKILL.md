@@ -1,6 +1,7 @@
 ---
 name: design-replication-for-the-required-guarantees
-description: Choose leader-based, multi-leader, leaderless, or other replication strategies according to availability, latency, consistency, and operational needs. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Choose leader-based, multi-leader, leaderless, or other replication strategies according to availability, latency, consistency, and operational needs. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Replication for the Required Guarantees

@@ -1,6 +1,7 @@
 ---
 name: keep-tests-fast-and-deterministic
-description: Control external dependencies, time, randomness, and concurrency so feedback remains repeatable and fast enough for normal development. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Control external dependencies, time, randomness, and concurrency so feedback remains repeatable and fast enough for normal development. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Keep Tests Fast and Deterministic

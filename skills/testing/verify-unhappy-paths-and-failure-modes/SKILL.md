@@ -1,6 +1,7 @@
 ---
 name: verify-unhappy-paths-and-failure-modes
-description: Deliberately verify invalid inputs, failures, retries, timeouts, boundary conditions, and unexpected side effects. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Deliberately verify invalid inputs, failures, retries, timeouts, boundary conditions, and unexpected side effects. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Verify Unhappy Paths and Failure Modes

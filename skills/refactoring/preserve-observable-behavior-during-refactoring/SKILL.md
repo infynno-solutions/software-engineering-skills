@@ -1,6 +1,7 @@
 ---
 name: preserve-observable-behavior-during-refactoring
-description: Keep externally observable behavior unchanged while improving internal structure; separate behavior changes from structural changes. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Keep externally observable behavior unchanged while improving internal structure; separate behavior changes from structural changes. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Preserve Observable Behavior During Refactoring

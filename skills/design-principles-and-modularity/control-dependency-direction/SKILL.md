@@ -1,6 +1,7 @@
 ---
 name: control-dependency-direction
-description: Treat dependency arrows as an architectural design tool and ensure they reinforce stability, ownership, and desired change flow. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat dependency arrows as an architectural design tool and ensure they reinforce stability, ownership, and desired change flow. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Control Dependency Direction

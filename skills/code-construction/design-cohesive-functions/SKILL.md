@@ -1,6 +1,7 @@
 ---
 name: design-cohesive-functions
-description: Give each function a clear, coherent purpose so that its name, interface, control flow, and effects form a consistent abstraction. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Give each function a clear, coherent purpose so that its name, interface, control flow, and effects form a consistent abstraction. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Cohesive Functions

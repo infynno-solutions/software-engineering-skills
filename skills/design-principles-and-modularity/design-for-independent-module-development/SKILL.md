@@ -1,6 +1,7 @@
 ---
 name: design-for-independent-module-development
-description: Structure components and interfaces so teams can understand, modify, test, and integrate work with minimal unnecessary coordination. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Structure components and interfaces so teams can understand, modify, test, and integrate work with minimal unnecessary coordination. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design for Independent Development

@@ -1,6 +1,7 @@
 ---
 name: separate-feature-work-from-refactoring
-description: Keep feature behavior changes conceptually separate from pure structural refactoring so reviews, tests, and debugging remain tractable. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Keep feature behavior changes conceptually separate from pure structural refactoring so reviews, tests, and debugging remain tractable. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Separate Feature Work From Refactoring

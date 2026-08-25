@@ -1,6 +1,7 @@
 ---
 name: use-tests-to-enable-refactoring
-description: Use a meaningful behavioral test suite as protection while restructuring internals. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use a meaningful behavioral test suite as protection while restructuring internals. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Tests to Enable Refactoring

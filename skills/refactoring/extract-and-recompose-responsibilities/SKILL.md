@@ -1,6 +1,7 @@
 ---
 name: extract-and-recompose-responsibilities
-description: Use extraction, movement, and recomposition refactorings to restore cohesive functions/classes and improve responsibility boundaries. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use extraction, movement, and recomposition refactorings to restore cohesive functions/classes and improve responsibility boundaries. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Extract and Recompose Responsibilities

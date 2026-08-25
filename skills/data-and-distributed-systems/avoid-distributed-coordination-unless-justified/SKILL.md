@@ -1,6 +1,7 @@
 ---
 name: avoid-distributed-coordination-unless-justified
-description: Avoid consensus, distributed transactions, or other coordination mechanisms unless the correctness requirement truly demands them. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Avoid consensus, distributed transactions, or other coordination mechanisms unless the correctness requirement truly demands them. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Avoid Distributed Coordination Unless Justified

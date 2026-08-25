@@ -1,6 +1,7 @@
 ---
 name: conduct-effective-code-reviews
-description: Use review to improve correctness, readability, maintainability, and knowledge sharing rather than as a gate for personal style preferences. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use review to improve correctness, readability, maintainability, and knowledge sharing rather than as a gate for personal style preferences. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Conduct Effective Code Reviews

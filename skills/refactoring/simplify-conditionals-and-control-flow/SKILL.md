@@ -1,6 +1,7 @@
 ---
 name: simplify-conditionals-and-control-flow
-description: Reduce complicated conditionals and state-dependent branching by extracting logic, clarifying predicates, or applying polymorphism where justified. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Reduce complicated conditionals and state-dependent branching by extracting logic, clarifying predicates, or applying polymorphism where justified. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Simplify Conditionals and Control Flow

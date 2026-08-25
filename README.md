@@ -63,7 +63,7 @@ gh skill publish --dry-run
 Then publish a versioned release with:
 
 ```bash
-gh skill publish --tag v1.0.0
+gh skill publish --tag v1.0.1
 ```
 
 ## Design principles

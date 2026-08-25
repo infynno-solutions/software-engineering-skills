@@ -1,6 +1,7 @@
 ---
 name: test-risky-boundaries-and-integrations
-description: Exercise interactions where assumptions can break: serialization, databases, services, configuration, concurrency, and real infrastructure. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Exercise interactions where assumptions can break: serialization, databases, services, configuration, concurrency, and real infrastructure. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Test Risky Boundaries and Integrations

@@ -1,6 +1,7 @@
 ---
 name: avoid-premature-distribution
-description: Prefer the simplest deployment topology that meets requirements; do not use network boundaries to solve problems that source boundaries can solve more cheaply. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Prefer the simplest deployment topology that meets requirements; do not use network boundaries to solve problems that source boundaries can solve more cheaply. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Avoid Premature Distribution

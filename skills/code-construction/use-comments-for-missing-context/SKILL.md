@@ -1,6 +1,7 @@
 ---
 name: use-comments-for-missing-context
-description: Use comments and documentation to communicate intent, rationale, constraints, and non-obvious context that cannot be made sufficiently clear through code structure alone. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use comments and documentation to communicate intent, rationale, constraints, and non-obvious context that cannot be made sufficiently clear through code structure alone. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Comments for Missing Context

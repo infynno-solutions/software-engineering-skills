@@ -1,6 +1,7 @@
 ---
 name: choose-data-models-from-access-patterns
-description: Choose relational, document, graph, or other data models based on how data is queried, updated, related, and evolved. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Choose relational, document, graph, or other data models based on how data is queried, updated, related, and evolved. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Choose Data Models From Access Patterns

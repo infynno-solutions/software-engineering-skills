@@ -1,6 +1,7 @@
 ---
 name: encapsulate-object-creation
-description: . Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: ". Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Intent

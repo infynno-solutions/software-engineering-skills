@@ -1,6 +1,7 @@
 ---
 name: align-stability-and-abstraction
-description: Use abstraction where stable components need flexibility, while avoiding stable concrete components that become difficult to change and unstable abstract components that add little value. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use abstraction where stable components need flexibility, while avoiding stable concrete components that become difficult to change and unstable abstract components that add little value. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Align Stability and Abstraction

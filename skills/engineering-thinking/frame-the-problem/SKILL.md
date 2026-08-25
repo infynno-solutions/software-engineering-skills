@@ -1,6 +1,7 @@
 ---
 name: frame-the-problem
-description: Understand the problem, desired outcome, and relevant context before selecting an implementation. The agent should solve the stated engineering problem rather than prematurely optimizing for a particular implementation, pattern, framework, or technology. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Understand the problem, desired outcome, and relevant context before selecting an implementation. The agent should solve the stated engineering problem rather than prematurely optimizing for a particular implementation, pattern, framework, or technology. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Frame the Problem Before Designing the Solution

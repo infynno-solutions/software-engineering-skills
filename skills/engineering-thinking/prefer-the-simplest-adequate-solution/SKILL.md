@@ -1,6 +1,7 @@
 ---
 name: prefer-the-simplest-adequate-solution
-description: Choose a solution that satisfies the actual requirements while introducing as little unnecessary complexity, indirection, and speculative flexibility as practical. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Choose a solution that satisfies the actual requirements while introducing as little unnecessary complexity, indirection, and speculative flexibility as practical. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Prefer the Simplest Adequate Solution

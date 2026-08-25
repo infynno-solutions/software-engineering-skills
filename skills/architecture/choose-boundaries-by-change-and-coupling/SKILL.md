@@ -1,6 +1,7 @@
 ---
 name: choose-boundaries-by-change-and-coupling
-description: Choose boundaries based on axes of change, coupling, ownership, and required independence rather than fashionable topology. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Choose boundaries based on axes of change, coupling, ownership, and required independence rather than fashionable topology. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Choose Boundaries by Change and Coupling

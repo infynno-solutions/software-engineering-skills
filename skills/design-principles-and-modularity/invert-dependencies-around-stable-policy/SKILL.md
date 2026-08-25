@@ -1,6 +1,7 @@
 ---
 name: invert-dependencies-around-stable-policy
-description: Make high-level policy independent of volatile implementation details by placing abstractions at the dependency boundary. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make high-level policy independent of volatile implementation details by placing abstractions at the dependency boundary. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Invert Dependencies Around Stable Policy

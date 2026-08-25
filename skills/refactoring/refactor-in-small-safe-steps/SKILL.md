@@ -1,6 +1,7 @@
 ---
 name: refactor-in-small-safe-steps
-description: Perform refactoring as a sequence of small, reversible structural changes so the code spends little time in a broken or incoherent state. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Perform refactoring as a sequence of small, reversible structural changes so the code spends little time in a broken or incoherent state. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Refactor in Small Safe Steps

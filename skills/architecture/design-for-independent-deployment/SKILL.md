@@ -1,6 +1,7 @@
 ---
 name: design-for-independent-deployment
-description: Create deployment boundaries when independent release, fault isolation, or scaling actually matters; otherwise avoid needless distribution. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Create deployment boundaries when independent release, fault isolation, or scaling actually matters; otherwise avoid needless distribution. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design for Independent Deployment

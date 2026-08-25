@@ -1,6 +1,7 @@
 ---
 name: make-systems-operable
-description: Expose the information and controls operators need to understand, diagnose, change, and recover the system. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Expose the information and controls operators need to understand, diagnose, change, and recover the system. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Make Systems Operable

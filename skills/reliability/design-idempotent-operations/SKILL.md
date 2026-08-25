@@ -1,6 +1,7 @@
 ---
 name: design-idempotent-operations
-description: Make retried or duplicated requests converge on the same intended result whenever practical. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make retried or duplicated requests converge on the same intended result whenever practical. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design Idempotent Operations

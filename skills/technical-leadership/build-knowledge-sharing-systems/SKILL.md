@@ -1,6 +1,7 @@
 ---
 name: build-knowledge-sharing-systems
-description: Create durable channels and canonical sources that reduce tribal knowledge and make expertise discoverable. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Create durable channels and canonical sources that reduce tribal knowledge and make expertise discoverable. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Build Knowledge-Sharing Systems

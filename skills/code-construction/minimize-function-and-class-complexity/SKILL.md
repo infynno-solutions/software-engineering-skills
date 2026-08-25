@@ -1,6 +1,7 @@
 ---
 name: minimize-function-and-class-complexity
-description: Reduce the amount of code and state a developer must mentally track at once while preserving required behavior. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Reduce the amount of code and state a developer must mentally track at once while preserving required behavior. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Minimize Function and Class Complexity

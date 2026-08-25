@@ -1,6 +1,7 @@
 ---
 name: revisit-process-rules-using-evidence
-description: Treat engineering rules as hypotheses that should be revisited when technologies, costs, and observed outcomes change. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Treat engineering rules as hypotheses that should be revisited when technologies, costs, and observed outcomes change. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Revisit Process Rules Using Evidence

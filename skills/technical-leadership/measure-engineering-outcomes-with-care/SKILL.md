@@ -1,6 +1,7 @@
 ---
 name: measure-engineering-outcomes-with-care
-description: Use meaningful goals, signals, and metrics to improve engineering outcomes while avoiding proxy optimization and vanity metrics. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use meaningful goals, signals, and metrics to improve engineering outcomes while avoiding proxy optimization and vanity metrics. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Measure Engineering Outcomes With Care

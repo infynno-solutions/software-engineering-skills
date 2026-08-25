@@ -1,6 +1,7 @@
 ---
 name: make-dependencies-explicit
-description: Make data, control, ordering, and resource dependencies visible so that readers and maintainers can reason about the code without discovering hidden coupling through failures. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make data, control, ordering, and resource dependencies visible so that readers and maintainers can reason about the code without discovering hidden coupling through failures. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Make Dependencies Explicit

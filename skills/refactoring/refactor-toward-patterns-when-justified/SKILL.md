@@ -1,6 +1,7 @@
 ---
 name: refactor-toward-patterns-when-justified
-description: Introduce a pattern only when repeated variation and forces justify it; use refactoring to evolve toward the pattern incrementally. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Introduce a pattern only when repeated variation and forces justify it; use refactoring to evolve toward the pattern incrementally. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Refactor Toward Patterns When Justified

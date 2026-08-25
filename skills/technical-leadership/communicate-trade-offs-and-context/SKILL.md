@@ -1,6 +1,7 @@
 ---
 name: communicate-trade-offs-and-context
-description: Explain important technical choices in terms of goals, constraints, alternatives, costs, risks, and consequences. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Explain important technical choices in terms of goals, constraints, alternatives, costs, risks, and consequences. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Communicate Trade-offs and Context

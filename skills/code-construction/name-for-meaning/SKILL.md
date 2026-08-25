@@ -1,6 +1,7 @@
 ---
 name: name-for-meaning
-description: Use names that communicate purpose, responsibility, domain meaning, and relevant behavior clearly enough that the reader does not need surrounding implementation to decode them. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use names that communicate purpose, responsibility, domain meaning, and relevant behavior clearly enough that the reader does not need surrounding implementation to decode them. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Name for Meaning

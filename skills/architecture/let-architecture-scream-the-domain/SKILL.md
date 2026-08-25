@@ -1,6 +1,7 @@
 ---
 name: let-architecture-scream-the-domain
-description: Organize the architecture so the primary business capabilities and use cases are visible before framework or infrastructure details. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Organize the architecture so the primary business capabilities and use cases are visible before framework or infrastructure details. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Let Architecture Scream the Domain

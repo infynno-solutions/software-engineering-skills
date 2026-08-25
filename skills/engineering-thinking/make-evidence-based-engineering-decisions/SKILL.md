@@ -1,6 +1,7 @@
 ---
 name: make-evidence-based-engineering-decisions
-description: Base engineering decisions on the best available evidence rather than authority, taste, habit, or untested assumptions. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Base engineering decisions on the best available evidence rather than authority, taste, habit, or untested assumptions. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Make Evidence-Based Engineering Decisions

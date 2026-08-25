@@ -1,6 +1,7 @@
 ---
 name: optimize-for-fast-feedback
-description: Move inexpensive, high-signal checks earlier and reduce feedback latency without sacrificing important coverage. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Move inexpensive, high-signal checks earlier and reduce feedback latency without sacrificing important coverage. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Optimize for Fast Feedback

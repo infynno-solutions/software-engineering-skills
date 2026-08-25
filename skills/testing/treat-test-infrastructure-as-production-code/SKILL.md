@@ -1,6 +1,7 @@
 ---
 name: treat-test-infrastructure-as-production-code
-description: Maintain test helpers, fakes, harnesses, and infrastructure with the same discipline required to keep tests trustworthy. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Maintain test helpers, fakes, harnesses, and infrastructure with the same discipline required to keep tests trustworthy. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Treat Test Infrastructure as Production Code

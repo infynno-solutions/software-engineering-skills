@@ -1,6 +1,7 @@
 ---
 name: write-for-the-maintainer
-description: Optimize code for the future engineer who must understand, debug, modify, review, or extend it rather than only for the author completing today's task. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Optimize code for the future engineer who must understand, debug, modify, review, or extend it rather than only for the author completing today's task. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Write for the Maintainer

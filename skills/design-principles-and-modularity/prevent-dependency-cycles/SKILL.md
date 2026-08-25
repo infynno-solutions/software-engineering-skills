@@ -1,6 +1,7 @@
 ---
 name: prevent-dependency-cycles
-description: Keep component/module dependencies acyclic so components remain buildable, testable, releasable, and understandable. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Keep component/module dependencies acyclic so components remain buildable, testable, releasable, and understandable. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Prevent Dependency Cycles

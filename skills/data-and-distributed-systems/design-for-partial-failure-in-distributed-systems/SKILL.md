@@ -1,6 +1,7 @@
 ---
 name: design-for-partial-failure-in-distributed-systems
-description: Assume messages can be delayed, duplicated, reordered, or lost and processes can fail independently. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Assume messages can be delayed, duplicated, reordered, or lost and processes can fail independently. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Design for Partial Failure in Distributed Systems

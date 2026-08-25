@@ -1,6 +1,7 @@
 ---
 name: use-timeouts-and-deadlines
-description: Avoid indefinite waiting by setting explicit time budgets and propagating them through dependent operations. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Avoid indefinite waiting by setting explicit time budgets and propagating them through dependent operations. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Use Timeouts and Deadlines

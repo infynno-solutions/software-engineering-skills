@@ -1,6 +1,7 @@
 ---
 name: choose-the-right-test-scope
-description: Use unit, integration, or larger-scope tests according to the failure risk, collaboration boundary, speed, and realism required. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Use unit, integration, or larger-scope tests according to the failure risk, collaboration boundary, speed, and realism required. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Choose the Right Test Scope

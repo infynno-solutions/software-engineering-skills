@@ -1,6 +1,7 @@
 ---
 name: keep-interfaces-narrow-and-client-focused
-description: Expose only the operations a client genuinely needs so clients do not inherit unnecessary coupling. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Expose only the operations a client genuinely needs so clients do not inherit unnecessary coupling. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Keep Interfaces Narrow and Client-Focused

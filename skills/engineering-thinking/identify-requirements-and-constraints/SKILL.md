@@ -1,6 +1,7 @@
 ---
 name: identify-requirements-and-constraints
-description: Make the boundaries of an engineering problem explicit before choosing a solution. The agent should distinguish what the system must do from constraints imposed by the environment and from assumptions that may later change. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Make the boundaries of an engineering problem explicit before choosing a solution. The agent should distinguish what the system must do from constraints imposed by the environment and from assumptions that may later change. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Identify Requirements and Constraints

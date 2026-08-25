@@ -1,6 +1,7 @@
 ---
 name: isolate-failures-and-limit-blast-radius
-description: Partition resources and failure domains so one component, tenant, workload, or dependency cannot cascade through the whole system. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Partition resources and failure domains so one component, tenant, workload, or dependency cannot cascade through the whole system. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Isolate Failures and Limit Blast Radius

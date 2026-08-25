@@ -1,6 +1,7 @@
 ---
 name: make-retries-safe-and-bounded
-description: Retry only operations for which repeated execution is safe or controlled, and bound attempts with backoff and deadlines. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern.
+description: "Retry only operations for which repeated execution is safe or controlled, and bound attempts with backoff and deadlines. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+license: MIT
 ---
 
 # Make Retries Safe and Bounded
