@@ -1,24 +1,16 @@
 ---
 name: minimize-object-coupling
-description: ". Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "The broad diagnostic for when an object's coupling - concrete-type dependence, shared mutable state, or leaked internals - has become the problem, and which kind it is. Use when a constructor or method signature keeps growing dependencies, changes propagate through long call chains, tests must build large object graphs for a small unit, or objects communicate through shared mutable state. Not for the specific fixes of naming a contract (see program-to-abstractions) or relocating construction (see separate-collaboration-from-implementation), and not for coupling across an API, package, or service boundary (see control-coupling-across-boundaries)."
 license: MIT
 ---
 
-# Intent
+# Minimize Object Coupling
+
+## Intent
 
 Keep object collaborations small, explicit, and stable so each object can be understood and changed with limited knowledge of the rest of the system.
 
-# When to apply
-
-Use when:
-
-- an object directly knows many concrete collaborators;
-- internal details of one object are required to use another;
-- changes propagate through long call chains;
-- tests require constructing large object graphs for a small unit;
-- objects communicate through shared mutable state.
-
-# Procedure
+## Procedure
 
 1. Inventory important collaborators and dependencies.
 2. Determine what knowledge each dependency requires.
@@ -28,27 +20,29 @@ Use when:
 6. Keep each collaboration focused on a coherent request.
 7. Check the result for over-indirection and excessive plumbing.
 
-# Decision rules
+## Decision rules
 
 - Prefer small, explicit collaborations over broad object knowledge.
 - Reduce coupling when it creates change propagation, cognitive load, or testing difficulty.
 - Do not confuse fewer references with lower conceptual coupling; a single dependency can still expose many assumptions.
 - Do not eliminate necessary domain relationships merely to achieve a low dependency count.
 
-# Anti-patterns
+## Anti-patterns
 
 - Objects reaching through several collaborators to manipulate internal state.
 - Shared mutable globals used as an implicit coordination protocol.
 - Concrete implementation dependencies spread across consumers.
 - A "facade" that merely hides a huge dependency graph without simplifying the underlying contract.
 
-# Verification
+## Exceptions and trade-offs
+
+- Some domain relationships are inherently wide — an aggregate root that must coordinate several child entities, for example. Forcing that down to an arbitrarily "small" dependency count can hide real complexity rather than remove it.
+- Introducing a facade or mediator to reduce visible coupling adds its own object and indirection — worthwhile only when it actually narrows the contract, not when it just relocates the same broad dependency behind one more name.
+- Passing a single rich object rather than several primitive parameters can look like "one dependency" while still coupling the caller to many of that object's fields; count conceptual coupling, not reference count.
+
+## Verification
 
 - Can an object use its collaborator without knowing its internals?
 - Are dependencies visible in the contract or constructor?
 - Does a local implementation change avoid forcing broad changes?
 - Can the object be tested without recreating unrelated system state?
-
-# Source basis
-
-Code Complete describes loose coupling as reducing overall complexity and making it possible to focus on one thing at a time. GoF explains abstract coupling and composition as mechanisms for reducing implementation dependencies. Head First emphasizes loose coupling through composition. Clean Architecture generalizes coupling control to source-code dependency direction and architectural boundaries.

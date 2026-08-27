@@ -1,6 +1,6 @@
 ---
 name: manage-essential-vs-accidental-complexity
-description: "Distinguish complexity inherent to the problem from complexity introduced by the chosen design, and actively reduce the latter. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Distinguishes complexity inherent to the problem from complexity introduced by the chosen design, and actively reduces the latter. Use when a PR adds a factory, a strategy interface, and a config layer for a single if/else worth of variation; when a review flags this is hard to follow and it is unclear whether the domain or the implementation is the cause; or when enterprise patterns appear on a small system with no scale problem to justify them. Not when picking between several already-simple designs (see evaluate-engineering-trade-offs), or when the question is whether a variation point deserves a boundary given expected change (see identify-the-shape-of-change first)."
 license: MIT
 ---
 
@@ -9,19 +9,6 @@ license: MIT
 ## Intent
 
 Distinguish complexity inherent to the problem from complexity introduced by the chosen design, and actively reduce the latter.
-
-## Apply when
-
-Use this skill when evaluating:
-
-- architecture proposals
-- abstractions
-- infrastructure choices
-- difficult code
-- framework usage
-- performance work
-- “enterprise” patterns or layers
-- any design that appears harder to understand than the problem itself
 
 ## Procedure
 
@@ -45,6 +32,12 @@ Use this skill when evaluating:
 - Optimizing for hypothetical scale while making the current system substantially harder to reason about.
 - Treating sophisticated technology as inherently more robust.
 
+## Exceptions and trade-offs
+
+- Some accidental complexity is the price of working within a platform, framework, or legacy integration — the goal is minimizing it, not eliminating what the environment genuinely requires.
+- Complexity introduced to make a system testable, observable, or debuggable is often essential in practice even though it is not required by the domain itself — weigh it against those operational needs, not just the literal problem statement.
+- Removing an abstraction that several teams already depend on may cost more in migration risk than leaving it in place, even if it was accidental in origin.
+
 ## Verification
 
 Ask:
@@ -53,10 +46,3 @@ Ask:
 - Which parts of the design exist only because of the current implementation?
 - Does each abstraction reduce cognitive load or isolate a meaningful concern?
 - Can an engineer safely ignore most of the system while working on one part?
-
-
-## Related skills
-
-- ENG-08 Prefer the Simplest Adequate Solution
-- CODE-05 Minimize Function and Class Complexity
-- MOD-11 Control Coupling Across Boundaries

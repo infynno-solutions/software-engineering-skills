@@ -1,24 +1,16 @@
 ---
 name: encapsulate-representation
-description: ". Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Hides one object's own fields and storage format, exposing behavior-oriented operations so callers cannot depend on the representation. Use when designing a class's public API, exposing internal collections, deciding whether callers may mutate state directly, or wrapping third-party data. Not for depending on someone else's behavior through a contract (see program-to-abstractions), the breadth of an object's collaborators (see minimize-object-coupling), or a module- or service-level boundary leaking mechanism (see encapsulate-implementation-details)."
 license: MIT
 ---
 
-# Intent
+# Encapsulate Representation
+
+## Intent
 
 Expose what clients need to use an object and hide what they do not need to know.
 
-# When to apply
-
-Use when:
-
-- designing public APIs for classes;
-- exposing fields or internal collections;
-- deciding whether callers should mutate state directly;
-- wrapping third-party or infrastructure details;
-- preparing a component for likely implementation changes.
-
-# Procedure
+## Procedure
 
 1. Identify the behavior clients actually require.
 2. Identify internal state, data structures, algorithms, and invariants required to implement that behavior.
@@ -27,14 +19,14 @@ Use when:
 5. Prevent callers from depending on representation-specific details.
 6. Check whether getters/setters or direct collection exposure have unintentionally expanded the contract.
 
-# Decision rules
+## Decision rules
 
 - Prefer behavior-oriented interfaces over representation-oriented access.
 - Expose an internal collection only when its mutability and representation are genuinely part of the contract.
 - Hide details that can change independently of client needs.
 - Do not manufacture elaborate abstractions solely to hide trivial implementation details; the boundary should earn its complexity.
 
-# Anti-patterns
+## Anti-patterns
 
 - Public mutable fields for state that has invariants.
 - Returning internal mutable collections directly.
@@ -42,7 +34,14 @@ Use when:
 - Clients branching on internal implementation types.
 - Abstracting everything simply because encapsulation exists as a principle.
 
-# Verification
+## Exceptions and trade-offs
+
+- Simple data-carrier types (DTOs, value objects, immutable records) can expose fields directly when there are no invariants to protect — encapsulation has no protective work to do there, and getters would be pure ceremony.
+- Returning a defensive copy of an internal collection costs an extra allocation; on a hot path, an unmodifiable/read-only view can be an acceptable middle ground even though it still reveals the collection's element type.
+- Wrapping every primitive field in its own tiny accessor method for no protective reason adds ceremony without guarding any real invariant — this principle is not "no public fields, ever."
+- ORMs and serialization frameworks sometimes require public fields or setters for mechanical reasons; confine that exposure to the mapping layer rather than letting it define the domain-facing API.
+
+## Verification
 
 Ask:
 
@@ -50,7 +49,3 @@ Ask:
 - Can invariants be protected inside the object?
 - Do consumers depend on behavior or on representation?
 - Is the public interface smaller than the implementation knowledge behind it?
-
-# Source basis
-
-GoF defines encapsulation as hiding representation and implementation behind operations. Code Complete recommends exposing information on a need-to-know basis and hiding implementation details. Clean Architecture extends the same principle to architectural boundaries.

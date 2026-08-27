@@ -1,6 +1,6 @@
 ---
 name: use-compiler-and-static-feedback
-description: "Use compiler diagnostics, type checking, linters, static analysis, and automated code-quality checks as part of the normal development loop rather than as optional cleanup. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Treats compiler, type-checker, and lint diagnostics as routine engineering feedback. Use before opening a review, running the type checker and linter locally rather than letting CI catch it first, and when deciding whether to add a suppression comment such as ts-ignore, noqa, or nolint versus fixing the underlying issue or configuring the rule properly. Not for invariants the toolchain cannot express - untrusted input, runtime state machines, cross-service contracts (see apply-defensive-programming) - and not for selecting and rolling out analysis tooling across a team (see use-static-analysis-in-the-core-workflow)."
 license: MIT
 ---
 
@@ -9,10 +9,6 @@ license: MIT
 ## Intent
 
 Use compiler diagnostics, type checking, linters, static analysis, and automated code-quality checks as part of the normal development loop rather than as optional cleanup.
-
-## Apply when
-
-Use this skill whenever modifying typed or statically analyzed code and whenever repository tooling provides automated feedback.
 
 ## Procedure
 
@@ -36,16 +32,15 @@ Use this skill whenever modifying typed or statically analyzed code and whenever
 - Flooding developers with low-value static-analysis findings.
 - Treating tool output as more authoritative than the actual project contract when the rule is misconfigured.
 
+## Exceptions and trade-offs
+
+- A rule that produces many false positives against the repo's actual patterns is a case for fixing or disabling that specific rule through the project's exception mechanism, not for ignoring all static feedback.
+- Early-stage prototypes or throwaway scripts may reasonably run with relaxed strictness; tighten it once the code is heading to production.
+- Migrating an existing codebase to stricter settings (enabling a `strict` type-checking mode) is often a staged effort — don't block an unrelated fix on resolving every pre-existing warning.
+
 ## Verification
 
 - Do standard checks pass?
 - Were new warnings introduced?
 - Are exceptions explicit and justified?
 - Did automation catch issues that would otherwise depend on reviewer attention?
-
-
-## Related skills
-
-- CODE-13 Apply Defensive Programming
-- PROC-06 Use Static Analysis
-- TEST-06 Create Fast Feedback Loops

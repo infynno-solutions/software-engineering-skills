@@ -1,28 +1,16 @@
 ---
 name: frame-the-problem
-description: "Understand the problem, desired outcome, and relevant context before selecting an implementation. The agent should solve the stated engineering problem rather than prematurely optimizing for a particular implementation, pattern, framework, or technology. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Establishes the actual problem, desired outcome, and relevant context before an implementation is chosen. Use when a ticket says add a Redis cache here and it is unclear what problem caching solves, when a bug report describes a symptom such as the button is slow that may trace to a different root cause, or when a request names a technology or pattern before the underlying need is stated. Not when the problem is already framed and the open question is which quality attributes bound the solution (see identify-requirements-and-constraints), or when several candidate designs need comparing (see iterate-design-before-committing, evaluate-engineering-trade-offs)."
 license: MIT
 ---
 
-# Frame the Problem Before Designing the Solution
+# Frame the Problem
 
 ## Intent
 
 Understand the problem, desired outcome, and relevant context before selecting an implementation.
 
 The agent should solve the stated engineering problem rather than prematurely optimizing for a particular implementation, pattern, framework, or technology.
-
-## Apply when
-
-Use this skill for:
-
-- feature work with ambiguous requirements
-- bug fixes where symptoms may not equal the root problem
-- architectural changes
-- performance work
-- refactoring proposals
-- new abstractions or infrastructure
-- changes whose blast radius is unclear
 
 ## Procedure
 
@@ -48,6 +36,12 @@ Use this skill for:
 - Treating the current architecture as the definition of the problem.
 - Designing for hypothetical requirements that have not been established.
 
+## Exceptions and trade-offs
+
+- For a genuinely trivial change (a typo fix, a one-line config tweak), full problem framing is wasted motion — apply judgment about scale before invoking the full procedure.
+- An incident in progress may require a stabilizing action before the problem is fully framed; frame the problem for the follow-up fix even if the immediate mitigation was reflexive.
+- Framing is not the same as gathering every possible fact — stop once the problem, outcome, and material constraints are stated, rather than turning it into open-ended research.
+
 ## Verification
 
 Before implementation, the agent should be able to answer:
@@ -58,11 +52,3 @@ Before implementation, the agent should be able to answer:
 - Which assumptions remain uncertain?
 
 If these cannot be answered, continue analysis rather than making a large design commitment.
-
-
-## Related skills
-
-- ENG-02 Identify Requirements and Constraints
-- ENG-03 Identify the Shape of Change
-- ENG-05 Evaluate Engineering Trade-offs
-- ENG-09 Iterate Design Before Committing

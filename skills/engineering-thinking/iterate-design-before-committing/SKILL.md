@@ -1,6 +1,6 @@
 ---
 name: iterate-design-before-committing
-description: "Treat design as an iterative engineering activity: explore alternatives, compare them, test important assumptions, and refine the solution before making an expensive commitment. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Treats design as iterative: explore alternatives, test risky assumptions, and refine before an expensive commitment. Use when a design doc goes straight from problem statement to a single architecture with no alternative written down, when a risky assumption such as a third-party API's behavior or a query's performance at scale underlies the whole design and has never been tested, or when a spike's findings never became an explicit decision. Not when alternatives already exist and are being compared (see evaluate-engineering-trade-offs), or when the problem itself is not yet understood (see frame-the-problem)."
 license: MIT
 ---
 
@@ -9,16 +9,6 @@ license: MIT
 ## Intent
 
 Treat design as an iterative engineering activity: explore alternatives, compare them, test important assumptions, and refine the solution before making an expensive commitment.
-
-## Apply when
-
-Use this skill when:
-
-- a design has multiple plausible solutions
-- requirements are still evolving
-- a change has high blast radius
-- the design introduces new abstractions or boundaries
-- there is a meaningful risk that the first solution will encode the wrong assumptions
 
 ## Procedure
 
@@ -42,6 +32,12 @@ Use this skill when:
 - Prototyping without converting findings into a decision.
 - Designing everything up front when small feedback cycles would reveal more information.
 
+## Exceptions and trade-offs
+
+- Scale the exploration to the stakes: a two-line bug fix does not need two competing designs, and demanding them wastes time without reducing risk.
+- A cheap prototype that answers the risky question is worth more than a long comparison table of untested designs — spend the budget on testing assumptions, not on generating options.
+- Iteration has a stopping point: once the dominant uncertainty is resolved, commit rather than continuing to explore for its own sake.
+
 ## Verification
 
 For a non-trivial design, retain a brief record of:
@@ -51,11 +47,3 @@ For a non-trivial design, retain a brief record of:
 - evaluation performed
 - selected approach
 - rejected alternatives and why
-
-
-## Related skills
-
-- ENG-01 Frame the Problem Before Designing the Solution
-- ENG-05 Evaluate Engineering Trade-offs
-- ENG-06 Make Evidence-Based Engineering Decisions
-- ENG-10 Revisit Decisions as Context Changes

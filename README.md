@@ -2,7 +2,7 @@
 
 A collection of reusable software-engineering skills for AI coding agents.
 
-This repository contains 141 agent-oriented skills synthesized into 12 engineering categories. The skills are written as operational guidance: when to apply a practice, how to reason about it, decision rules, anti-patterns, trade-offs, and verification criteria.
+This repository contains 138 agent-oriented skills synthesized into 12 engineering categories. Each skill's `description` states what it does, the concrete situations that should invoke it, and the sibling skills it should not be confused with. The body is operational guidance: intent, procedure, decision rules, anti-patterns, trade-offs, and verification criteria.
 
 ## Repository layout
 
@@ -20,10 +20,10 @@ Each published skill has exactly one `SKILL.md` entrypoint. Skill names are lowe
 - `engineering-thinking` — 10 skills
 - `code-construction` — 15 skills
 - `object-oriented-design` — 11 skills
-- `design-principles-and-modularity` — 13 skills
+- `design-principles-and-modularity` — 12 skills
 - `design-patterns` — 12 skills
-- `refactoring` — 12 skills
-- `architecture` — 12 skills
+- `refactoring` — 11 skills
+- `architecture` — 11 skills
 - `testing` — 11 skills
 - `reliability` — 11 skills
 - `data-and-distributed-systems` — 12 skills

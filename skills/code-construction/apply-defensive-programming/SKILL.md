@@ -1,6 +1,6 @@
 ---
 name: apply-defensive-programming
-description: "Make incorrect assumptions, invalid inputs, and unexpected states fail in controlled and diagnosable ways rather than silently propagating corruption. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Makes invalid inputs and unexpected states fail loudly and diagnosably at trust boundaries and state transitions, instead of propagating corruption. Use when validating an HTTP payload, guarding a null or unexpected value returned from a third-party library, rejecting a config file that fails schema checks, or hardening a state machine against a transition that should never occur. Skip for a call site already covered by a validated boundary. Not for compile-time type errors (see use-compiler-and-static-feedback), an implicit dependency rather than an untrusted input (see make-dependencies-explicit), or runtime failure handling such as retries and timeouts (see design-for-failure, make-retries-safe-and-bounded)."
 license: MIT
 ---
 
@@ -9,17 +9,6 @@ license: MIT
 ## Intent
 
 Make incorrect assumptions, invalid inputs, and unexpected states fail in controlled and diagnosable ways rather than silently propagating corruption.
-
-## Apply when
-
-Use this skill at:
-
-- public APIs
-- trust boundaries
-- file/network/database boundaries
-- configuration parsing
-- state transitions
-- code handling external or partially trusted data
 
 ## Procedure
 
@@ -43,17 +32,16 @@ Use this skill at:
 - Using exceptions as arbitrary control flow when simpler mechanisms are clearer.
 - Validating everywhere because validation was missing at the real boundary.
 
+## Exceptions and trade-offs
+
+- Every defensive check has a runtime and readability cost; do not re-validate the same invariant at every call site once a boundary already enforces it.
+- In hot paths, prefer a single upfront validation over a repeated per-iteration check.
+- Assertions meant to catch programmer errors are often stripped in release builds per language convention; do not conflate them with user-facing error handling that must survive in production.
+- When the type system can make the invalid state unrepresentable, prefer that over a runtime check.
+
 ## Verification
 
 - What invalid states can enter here?
 - Where are they first detected?
 - Does the failure preserve useful diagnostic information?
 - Is the chosen failure mechanism consistent with the surrounding system?
-
-
-## Related skills
-
-- CODE-06 Make Dependencies Explicit
-- CODE-09 Minimize State and Side Effects
-- CODE-14 Use Compiler and Static Feedback
-- REL-01 Design for Failure

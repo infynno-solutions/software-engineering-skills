@@ -1,6 +1,6 @@
 ---
 name: evaluate-engineering-trade-offs
-description: "Compare viable engineering alternatives explicitly instead of treating a preferred technique as universally correct. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Compares two or more viable alternatives explicitly instead of treating a preferred technique as universally correct. Use when a library switch, sync versus async, or SQL versus NoSQL choice must be justified; when a decision pits performance against simplicity or consistency against availability; when a reviewer asks why not just use X; or when a proposal cites best practice as its entire justification. Not when only one option has been identified (see iterate-design-before-committing first), when the question is how much complexity one design should carry (see manage-essential-vs-accidental-complexity), or whether to decide now at all (see defer-decisions-when-uncertainty-is-high)."
 license: MIT
 ---
 
@@ -9,19 +9,6 @@ license: MIT
 ## Intent
 
 Compare viable engineering alternatives explicitly instead of treating a preferred technique as universally correct.
-
-## Apply when
-
-Use this skill when choices affect:
-
-- performance versus simplicity
-- delivery speed versus long-term maintainability
-- isolation versus realism in tests
-- abstraction versus directness
-- consistency versus availability
-- build speed versus infrastructure cost
-- local complexity versus system-wide complexity
-- short-term versus long-term engineering cost
 
 ## Procedure
 
@@ -47,6 +34,12 @@ Use this skill when choices affect:
 - Ignoring engineering time because it is not an infrastructure bill.
 - Treating measurable costs as the only real costs.
 
+## Exceptions and trade-offs
+
+- A full trade-off table is overkill for a reversible, low-stakes choice — reserve the explicit comparison for decisions with real cost or blast radius.
+- When alternatives are close, documented judgment calls are acceptable; don't manufacture false precision to make one option look decisively better.
+- Two engineers can weigh the same trade-offs differently and both be reasonable — the goal is a visible comparison, not a single "correct" answer.
+
 ## Verification
 
 A design decision is sufficiently reasoned when another engineer can see:
@@ -56,11 +49,3 @@ A design decision is sufficiently reasoned when another engineer can see:
 - the important evidence
 - the principal trade-offs
 - the decision and its assumptions
-
-
-## Related skills
-
-- ENG-04 Manage Essential vs Accidental Complexity
-- ENG-06 Make Evidence-Based Engineering Decisions
-- ENG-07 Defer Decisions When Uncertainty Is High
-- ENG-08 Prefer the Simplest Adequate Solution

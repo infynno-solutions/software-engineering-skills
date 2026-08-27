@@ -1,6 +1,6 @@
 ---
 name: make-dependencies-explicit
-description: "Make data, control, ordering, and resource dependencies visible so that readers and maintainers can reason about the code without discovering hidden coupling through failures. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Makes data, ordering, and resource dependencies visible in signatures instead of hidden coupling. Use when tests only pass under a specific execution order, or a service assumes an init() or setup step was called first without that requirement appearing anywhere in its signature. Not when the hidden dependency is really a class exposing internal representation (see encapsulate-implementation-details), when the concern is the state footprint rather than its visibility (see minimize-state-and-side-effects), or when the fix is object-level injection design (see program-to-abstractions, invert-dependencies-around-stable-policy)."
 license: MIT
 ---
 
@@ -9,17 +9,6 @@ license: MIT
 ## Intent
 
 Make data, control, ordering, and resource dependencies visible so that readers and maintainers can reason about the code without discovering hidden coupling through failures.
-
-## Apply when
-
-Use this skill when:
-
-- functions depend on call ordering
-- global or shared state is involved
-- parameters encode hidden assumptions
-- one module relies on another's internal behavior
-- tests fail because setup or ordering is implicit
-- a change has surprising downstream effects
 
 ## Procedure
 
@@ -43,17 +32,15 @@ Use this skill when:
 - APIs whose correct use requires knowledge of internal call sequences.
 - Passing broad objects when only a narrow contract is actually required.
 
+## Exceptions and trade-offs
+
+- Widening a signature to make every dependency explicit can produce unwieldy parameter lists; prefer grouping into a cohesive context object over enumerating a dozen arguments.
+- Framework-managed dependency injection sometimes hides wiring by design (ambient request context, DI container magic); accept it where the framework convention is well understood repo-wide.
+- Not all coupling is worth eliminating — document a truly unavoidable ordering requirement rather than forcing an awkward API just to make it syntactically visible.
+
 ## Verification
 
 - Can a caller understand what must be true before invoking the operation?
 - Can the dependency be seen in the signature or boundary?
 - Would changing an implementation detail unexpectedly break consumers?
 - Are ordering requirements explicit and testable?
-
-
-## Related skills
-
-- CODE-09 Minimize State and Side Effects
-- CODE-10 Encapsulate Implementation Details
-- MOD-07 Control Dependency Direction
-- MOD-11 Control Coupling Across Boundaries

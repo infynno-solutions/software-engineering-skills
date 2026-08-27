@@ -1,6 +1,6 @@
 ---
 name: design-for-extension-without-fragile-modification
-description: "Use stable seams to accommodate foreseeable variation when modifying existing behavior repeatedly would spread risk. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Adds a stable seam - interface, strategy, extension point - at a genuine recurring variation point so new behavior can be added without editing code that already works. Use when a switch gains a case every release for a new payment type, file format, or notification channel, or when every past change to a module forced a regression pass across unrelated callers. Not for a subclass violating its base contract (see preserve-behavioral-substitutability), choosing the concrete pattern (see encapsulate-algorithmic-variation), or introducing the seam into existing code (see refactor-toward-patterns-when-justified)."
 license: MIT
 ---
 
@@ -9,34 +9,27 @@ license: MIT
 ## Intent
 Use stable seams to accommodate foreseeable variation when modifying existing behavior repeatedly would spread risk.
 
-## When to apply
-Apply this skill when the current task, code review, design change, incident, test strategy, or engineering-process decision materially involves this concern. First establish the concrete problem; do not invoke the skill only because its terminology appears in the task.
-
 ## Procedure
-1. Identify a genuine variation point.
+1. Identify a genuine variation point, not a hypothetical one.
 2. Estimate how often and how independently it is likely to change.
-3. Choose an extension mechanism that keeps stable policy intact.
+3. Choose an extension mechanism that keeps stable policy intact — prefer the narrowest one that fits.
 4. Reject the abstraction if the variation is speculative or the seam costs more than it saves.
 
 ## Decision rules
-- Prefer the smallest intervention that addresses the observed problem.
-- Make assumptions and trade-offs explicit when they materially affect the decision.
-- Preserve existing behavior unless the task explicitly requires a behavior change.
-- Prefer evidence from the codebase, tests, measurements, and system constraints over personal preference.
+- Require at least two real variants, or a concretely planned third, before introducing an extension seam.
+- Put the seam where the variation actually recurs (e.g., per-format serialization), not one level up or down from it.
+- Prefer a function parameter or strategy object before an inheritance hierarchy or plugin framework.
+- If using the seam still requires the caller to know which concrete variant to construct, the abstraction hasn't removed the coupling — it only moved it.
 
 ## Anti-patterns
-- Adding factories/interfaces for every possible future feature.
-- Using OCP as a mandate for inheritance-heavy frameworks.
+- Adding factories or interfaces for every possible future feature.
+- Using the open/closed principle as a mandate for inheritance-heavy frameworks.
 
 ## Exceptions and trade-offs
 - Small, stable systems may be better served by direct code until variation becomes real.
+- If the current change is the first observed variation, it's often cheaper to make the direct edit now and extract the seam when a second variant actually appears.
 
 ## Verification
-- Verify the affected behavior with the narrowest reliable automated checks available.
-- Inspect the resulting structure for unnecessary complexity or new coupling.
-- For system-level changes, verify operational and integration consequences, not only local correctness.
-
-
-## Related skills
-- [`keep-changes-localized`](../keep-changes-localized/SKILL.md)
-- [`preserve-behavioral-substitutability`](../preserve-behavioral-substitutability/SKILL.md)
+- Add or simulate a new variant and confirm it can be introduced by adding code, without editing the existing stable module's body.
+- Confirm existing variants and their tests still pass unmodified after the seam is introduced.
+- Check that the extension mechanism has more than one real implementation, or a concrete second use planned, not just the original case wrapped in an interface.

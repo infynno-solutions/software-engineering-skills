@@ -1,6 +1,6 @@
 ---
 name: encapsulate-implementation-details
-description: "Expose only what consumers need to use a component and hide representations and mechanisms that may change independently. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Exposes only what callers need at a class, module, or service boundary, hiding storage and mechanism. Use when a repository layer leaks ORM entities into business code, a public field exposes a mutable internal list, or a return type forces callers to know how a value is stored internally. Not when the class mixes unrelated responsibilities rather than over-exposing internals (see design-cohesive-classes), when a single function exposes too much of its algorithm (see write-code-at-the-level-of-intent), or for one object's own fields in OO terms (see encapsulate-representation)."
 license: MIT
 ---
 
@@ -9,17 +9,6 @@ license: MIT
 ## Intent
 
 Expose only what consumers need to use a component and hide representations and mechanisms that may change independently.
-
-## Apply when
-
-Use this skill at:
-
-- class and module interfaces
-- library APIs
-- database/repository boundaries
-- framework integrations
-- configuration boundaries
-- reusable components
 
 ## Procedure
 
@@ -43,17 +32,15 @@ Use this skill at:
 - Interfaces that expose internal lifecycle or storage details.
 - Abstractions that simply mirror an implementation without insulating change.
 
+## Exceptions and trade-offs
+
+- Encapsulating code with a single internal caller can add indirection without payoff — apply where a real boundary or multiple consumers exist.
+- Performance-critical code sometimes needs to expose internal representation deliberately (a buffer, a shared array); document the trade-off rather than hiding it behind a costly defensive copy.
+- Encapsulation is not a reason to build speculative abstraction layers for flexibility nobody has requested yet.
+
 ## Verification
 
 - Can the implementation change without changing consumers?
 - Does the interface describe the contract rather than the mechanism?
 - Are representation details inaccessible to consumers?
 - Does the boundary meaningfully reduce coupling?
-
-
-## Related skills
-
-- OO-02 Encapsulate Representation
-- OO-03 Program to Abstractions
-- MOD-06 Invert Dependencies Around Stable Policy
-- MOD-11 Control Coupling Across Boundaries

@@ -1,6 +1,6 @@
 ---
 name: keep-control-flow-understandable
-description: "Structure conditionals, loops, and exceptional paths so that the normal execution path is clear and unusual cases do not obscure the main behavior. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Keeps the normal execution path visible and unobscured by nested error handling. Use when several levels of nested try/catch bury an operation's main sequence of steps, or when deciding where the happy path should exit versus where an exceptional case should short-circuit it. Not for restructuring the predicates themselves (see simplify-conditional-logic), complexity spanning a whole function or class (see minimize-function-and-class-complexity), or restructuring existing nested conditionals under tests (see simplify-conditionals-and-control-flow)."
 license: MIT
 ---
 
@@ -9,18 +9,6 @@ license: MIT
 ## Intent
 
 Structure conditionals, loops, and exceptional paths so that the normal execution path is clear and unusual cases do not obscure the main behavior.
-
-## Apply when
-
-Use this skill when writing or reviewing:
-
-- conditionals
-- loops
-- state transitions
-- early returns
-- error paths
-- nested control structures
-- dispatch logic
 
 ## Procedure
 
@@ -44,16 +32,15 @@ Use this skill when writing or reviewing:
 - Error handling interleaved so heavily with normal logic that the core behavior is obscured.
 - Artificial use of `switch`/`case` or equivalent constructs.
 
+## Exceptions and trade-offs
+
+- A domain with genuinely many distinct cases may need a wide `switch`/dispatch; flattening it artificially can make an omitted case harder to spot, not easier.
+- Early-return-heavy style is not universally correct — in resource-cleanup-heavy code, a single-exit structure can be safer depending on whether the language offers `defer`/`finally`-style guarantees.
+- Separating error handling from the operation it guards structurally can obscure that a specific line can fail; keep the association visible even when the code is split.
+
 ## Verification
 
 - Can a reviewer follow the nominal path top-to-bottom?
 - Are exceptional paths distinguishable?
 - Is each decision understandable without parsing several nested conditions?
 - Does each loop have one clear iterative purpose?
-
-
-## Related skills
-
-- CODE-05 Minimize Function and Class Complexity
-- CODE-08 Simplify Conditional Logic
-- CODE-13 Apply Defensive Programming

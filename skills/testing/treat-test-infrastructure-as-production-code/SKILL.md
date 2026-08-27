@@ -1,6 +1,6 @@
 ---
 name: treat-test-infrastructure-as-production-code
-description: "Maintain test helpers, fakes, harnesses, and infrastructure with the same discipline required to keep tests trustworthy. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Maintains test helpers, fakes, harnesses, and fixtures with the discipline needed to keep tests trustworthy. Use when a fake has drifted from the real dependency it stands in for, when a helper with branching logic has no coverage of its own, or when shared fixtures force every test to specify a wall of unrelated fields. Not for choosing whether to use a double at all (see use-test-doubles-selectively), the readability of individual tests (see write-clear-maintainable-tests), or CI and developer tooling generally (see treat-tooling-as-an-engineering-product)."
 license: MIT
 ---
 
@@ -9,33 +9,33 @@ license: MIT
 ## Intent
 Maintain test helpers, fakes, harnesses, and infrastructure with the same discipline required to keep tests trustworthy.
 
-## When to apply
-Apply this skill when the current task, code review, design change, incident, test strategy, or engineering-process decision materially involves this concern. First establish the concrete problem; do not invoke the skill only because its terminology appears in the task.
-
 ## Procedure
-1. State the concrete engineering problem and desired outcome.
-2. Inspect the relevant code, architecture, tests, data flow, or team/process context.
-3. Choose the smallest change or practice that addresses the observed problem.
-4. Verify both the intended result and the important side effects or trade-offs.
+1. When adding a test helper, fake, or fixture that more than one test file will use, design its API deliberately — clear name, documented behavior, single responsibility — instead of copy-pasting setup inline everywhere.
+2. Give shared fakes and test doubles the same review scrutiny as production classes: does the fake's behavior actually match the real dependency's contract, including its error cases?
+3. Hold test infrastructure to the same quality bars as production code — no dead code, no untested helper logic that itself has bugs, no god-object "TestUtils" file that accumulates unrelated grab-bag functions.
+4. When a fake's real counterpart changes behavior (new field, new error case, changed default), update the fake in the same change; don't let it silently drift out of sync.
+5. Periodically audit shared test infrastructure for helpers nobody uses anymore, or ones whose complexity now exceeds what they save.
 
 ## Decision rules
-- Prefer the smallest intervention that addresses the observed problem.
-- Make assumptions and trade-offs explicit when they materially affect the decision.
-- Preserve existing behavior unless the task explicitly requires a behavior change.
-- Prefer evidence from the codebase, tests, measurements, and system constraints over personal preference.
+- A fake standing in for a real dependency is only trustworthy if it's kept behaviorally in sync with that dependency; assign it an owner or a contract test against the real thing.
+- Test helper functions with any nontrivial logic (branching, computed values) need their own coverage, or a bug in the helper silently invalidates every test that uses it.
+- Shared fixtures/builders should have sensible, minimal defaults and let each test override only what's relevant to it — not force every test to specify a wall of unrelated fields.
+- Delete unused test helpers and fixtures during the same change that removes their last caller; don't let them accumulate as untended debt.
 
 ## Anti-patterns
-- Apply the guidance as a mechanical rule without examining context.
-- Introduce complexity without demonstrating the problem it solves.
+- A hand-maintained in-memory fake of a service that hasn't been updated in a year while the real service's API moved on, so tests pass against a fiction.
+- A sprawling `TestHelpers`/`Utils` file with dozens of unrelated functions, no ownership, and no tests of its own.
+- Copy-pasted setup boilerplate duplicated across dozens of test files instead of extracted into one reviewed, named builder.
+- Test infrastructure changes pushed without review, "it's just test code," that quietly change what every consuming test actually verifies.
+- A fixture that mutates shared/global state and leaks between tests because nobody treats its lifecycle as a real concern.
 
 ## Exceptions and trade-offs
-- Use project constraints, language/runtime capabilities, risk, and lifecycle to adapt the practice.
+- For a one-off test with no reuse potential, inline setup is simpler and clearer than prematurely extracting a shared helper; extract only once duplication actually appears.
+- A quick throwaway fake for an experimental spike doesn't need production-grade polish, but should be clearly marked and not promoted to shared infrastructure without hardening.
+- Very thin wrappers, like a one-line test-data factory, don't need dedicated tests of their own if their logic is trivial and misuse would be immediately obvious from failing consumer tests.
 
 ## Verification
-- Verify the affected behavior with the narrowest reliable automated checks available.
-- Inspect the resulting structure for unnecessary complexity or new coupling.
-- For system-level changes, verify operational and integration consequences, not only local correctness.
-
-
-## Related skills
-- [`verify-unhappy-paths-and-failure-modes`](../verify-unhappy-paths-and-failure-modes/SKILL.md)
+- Check that any fake standing in for a real dependency has been validated against that dependency's actual current contract, via a contract test or a recent manual comparison.
+- Confirm shared test helpers with nontrivial logic have their own test coverage or are simple enough that failure would be obvious.
+- Look for duplicated setup across test files that should be consolidated, and for helpers with zero remaining callers that should be deleted.
+- Confirm test infrastructure changes went through the same review/PR process as production code changes.

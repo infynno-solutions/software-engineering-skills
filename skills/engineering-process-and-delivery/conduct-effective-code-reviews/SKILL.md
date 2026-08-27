@@ -1,6 +1,6 @@
 ---
 name: conduct-effective-code-reviews
-description: "Use review to improve correctness, readability, maintainability, and knowledge sharing rather than as a gate for personal style preferences. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Uses review to improve correctness, readability, maintainability, and knowledge sharing rather than as a gate for personal style preferences. Use when writing or responding to review comments on a specific PR, deciding whether a comment should block merge, or resolving a disagreement between author and reviewer. Not for sizing or structuring the PR before review begins (see make-changes-small-and-reviewable), whether review is enforced as a required gate at all (see automate-quality-gates-and-delivery), or the team's feedback norms and tone (see create-healthy-review-and-feedback-culture)."
 license: MIT
 ---
 
@@ -9,34 +9,34 @@ license: MIT
 ## Intent
 Use review to improve correctness, readability, maintainability, and knowledge sharing rather than as a gate for personal style preferences.
 
-## When to apply
-Apply this skill when the current task, code review, design change, incident, test strategy, or engineering-process decision materially involves this concern. First establish the concrete problem; do not invoke the skill only because its terminology appears in the task.
-
 ## Procedure
-1. State the concrete engineering problem and desired outcome.
-2. Inspect the relevant code, architecture, tests, data flow, or team/process context.
-3. Choose the smallest change or practice that addresses the observed problem.
-4. Verify both the intended result and the important side effects or trade-offs.
+1. Read the PR description and linked issue first so you review against intent, not just the diff in isolation.
+2. Do a first pass for correctness and behavior: does this do what it claims, are edge cases and error paths handled.
+3. Do a second pass for structure: naming, duplication, and whether tests actually cover the change.
+4. Label each comment's severity explicitly — blocking, non-blocking, nit, or question — so the author knows what must change before merge.
+5. For blocking comments, state the concrete risk or defect, not just a preference; route style-only comments to a linter instead of a review comment.
+6. Respond to author pushback by re-examining the evidence, not by defaulting to reviewer authority.
+7. Approve as soon as blocking comments are resolved; don't hold a PR hostage to non-blocking nits.
 
 ## Decision rules
-- Prefer the smallest intervention that addresses the observed problem.
-- Make assumptions and trade-offs explicit when they materially affect the decision.
-- Preserve existing behavior unless the task explicitly requires a behavior change.
-- Prefer evidence from the codebase, tests, measurements, and system constraints over personal preference.
+- A comment blocks merge only if it points to a correctness, security, data-loss, or maintainability risk that outweighs the cost of delay.
+- If the same comment would recur on every PR (formatting, import order), it belongs in a linter, not in review.
+- Prefer asking a question over asserting a fix when the reviewer is unsure of the author's intent.
+- Disagreement on a non-blocking comment defaults to the author's judgment unless a third opinion is sought.
 
 ## Anti-patterns
-- Apply the guidance as a mechanical rule without examining context.
-- Introduce complexity without demonstrating the problem it solves.
+- Rewriting the PR in comments instead of describing the problem and letting the author choose the fix.
+- Blocking merge on a personal style preference not backed by a team convention or linter rule.
+- Rubber-stamp approvals with no evidence the diff was actually read.
+- Comments that state something is wrong without saying what would make it right.
+- Letting a PR sit unreviewed past the team's expected review-latency norm.
 
 ## Exceptions and trade-offs
-- Use project constraints, language/runtime capabilities, risk, and lifecycle to adapt the practice.
+- Security-, compliance-, or data-migration-sensitive changes warrant slower, more thorough review than typical feature work.
+- A trusted, well-tested internal-tool change from an experienced author may reasonably get a lighter review than user-facing or shared-library code.
+- Under incident/hotfix pressure, review can be compressed to correctness-only, with a follow-up cleanup review after.
 
 ## Verification
-- Verify the affected behavior with the narrowest reliable automated checks available.
-- Inspect the resulting structure for unnecessary complexity or new coupling.
-- For system-level changes, verify operational and integration consequences, not only local correctness.
-
-
-## Related skills
-- [`make-changes-small-and-reviewable`](../make-changes-small-and-reviewable/SKILL.md)
-- [`use-continuous-integration`](../use-continuous-integration/SKILL.md)
+- Every blocking comment has a corresponding fix or an explicit resolution before merge.
+- The PR's tests actually exercise the changed behavior, not just pre-existing paths.
+- The diff is re-read after requested changes land, rather than approving on trust alone.
