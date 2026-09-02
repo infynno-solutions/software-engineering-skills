@@ -1,6 +1,6 @@
 ---
 name: identify-the-shape-of-change
-description: "Identify what is likely to change independently and arrange the design so those changes do not unnecessarily propagate through unrelated parts of the system. This is a foundational reasoning skill for abstraction, modularity, architecture, and refactoring. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Works out what is likely to change independently, so the design keeps those changes from propagating through unrelated parts of the system. Use when deciding whether billing and notification logic belong in the same service by asking what would force each to change, when a review comment says let's make this generic and a second real variation may not exist, or when two pieces of logic keep being edited together though they look unrelated. Not when the change points are already agreed and concrete designs need comparing (see evaluate-engineering-trade-offs), or when the question is whether to build the abstraction now at all (see defer-decisions-when-uncertainty-is-high)."
 license: MIT
 ---
 
@@ -11,17 +11,6 @@ license: MIT
 Identify what is likely to change independently and arrange the design so those changes do not unnecessarily propagate through unrelated parts of the system.
 
 This is a foundational reasoning skill for abstraction, modularity, architecture, and refactoring.
-
-## Apply when
-
-Use this skill before:
-
-- introducing an abstraction
-- splitting a module
-- selecting a design pattern
-- designing an API boundary
-- restructuring a subsystem
-- deciding whether two responsibilities belong together
 
 ## Procedure
 
@@ -45,6 +34,12 @@ Use this skill before:
 - Splitting components based only on aesthetics.
 - Assuming future change without identifying a plausible source or reason for it.
 
+## Exceptions and trade-offs
+
+- A boundary that isolates a real change source still costs indirection — for a component that changes rarely, that cost may outweigh the benefit even if the reasoning is technically sound.
+- Two things that change for different reasons can still be kept together temporarily if the system is small enough that the coupling cost is negligible; revisit once the codebase grows.
+- Predicting change sources is judgment, not certainty — when evidence is thin, prefer the boundary that is cheapest to introduce later over one that is expensive to introduce now.
+
 ## Verification
 
 For every proposed boundary, the agent should be able to state:
@@ -54,11 +49,3 @@ For every proposed boundary, the agent should be able to state:
 - What dependencies cross the boundary?
 - What complexity does the boundary introduce?
 - Would removing the boundary materially increase future change cost?
-
-
-## Related skills
-
-- ENG-07 Defer Decisions When Uncertainty Is High
-- OO-04 Encapsulate What Varies
-- MOD-01 Separate Responsibilities by Reason to Change
-- MOD-02 Keep Changes Localized

@@ -6,8 +6,8 @@ ROOT=Path(__file__).resolve().parents[1] / 'skills'
 errors=[]
 skills=list(ROOT.glob('*/*/SKILL.md'))
 
-if len(skills) != 141:
-    errors.append(f'Expected 141 skills, found {len(skills)}')
+if len(skills) != 138:
+    errors.append(f'Expected 138 skills, found {len(skills)}')
 
 seen=set()
 for p in skills:

@@ -1,6 +1,6 @@
 ---
 name: revisit-decisions-as-context-changes
-description: "Treat engineering decisions as contextual rather than permanent truths. Re-evaluate them when requirements, workload, team structure, operational constraints, evidence, or system age materially changes. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Re-evaluates past decisions when requirements, workload, team structure, operational constraints, evidence, or system age materially change. Use when traffic has grown 10x since the original database choice, when a component deferred as we will build it properly later is now load-bearing, when a postmortem reveals a failure mode the original design never anticipated, or when a once-maintainable system's difficulty traces to a specific past decision. Not when the original decision was never recorded or reasoned through (apply make-evidence-based-engineering-decisions to the current choice instead), and not for a preference for newer technology with no material change in context."
 license: MIT
 ---
 
@@ -9,17 +9,6 @@ license: MIT
 ## Intent
 
 Treat engineering decisions as contextual rather than permanent truths. Re-evaluate them when requirements, workload, team structure, operational constraints, evidence, or system age materially changes.
-
-## Apply when
-
-Review existing decisions when:
-
-- scale changes substantially
-- a previous assumption becomes false
-- a new failure mode appears
-- a system becomes difficult to maintain
-- new evidence contradicts the original reasoning
-- a previously deferred cost becomes material
 
 ## Procedure
 
@@ -44,6 +33,12 @@ Review existing decisions when:
 - Ignoring evidence because a previous architecture decision is considered settled.
 - Large rewrites when incremental migration could reduce risk.
 
+## Exceptions and trade-offs
+
+- Not every changed assumption warrants reopening a decision — revisit when the cost of leaving it stale is material relative to the cost of re-deciding, not on every drift.
+- A decision can be re-affirmed as still correct; revisiting is not the same as committing to change something.
+- Prefer incremental revision over a full redesign when the original decision is only partially invalidated — a full rewrite carries its own risk that a stale-but-working system did not have.
+
 ## Verification
 
 A healthy decision lifecycle has:
@@ -52,11 +47,3 @@ A healthy decision lifecycle has:
 - known assumptions
 - observable signals that would trigger reevaluation
 - an explicit current rationale
-
-
-## Related skills
-
-- ENG-05 Evaluate Engineering Trade-offs
-- ENG-06 Make Evidence-Based Engineering Decisions
-- ENG-07 Defer Decisions When Uncertainty Is High
-- ENG-09 Iterate Design Before Committing

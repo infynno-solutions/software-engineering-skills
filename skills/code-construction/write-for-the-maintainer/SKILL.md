@@ -1,6 +1,6 @@
 ---
 name: write-for-the-maintainer
-description: "Optimize code for the future engineer who must understand, debug, modify, review, or extend it rather than only for the author completing today's task. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "The umbrella judgment call for optimizing code for the future engineer who must read, debug, or extend it. Use when choosing between an obscure one-liner and a few clearer lines, or when deciding whether to follow local convention or a technically nicer pattern that would stand out from everything around it. When the concrete lever is naming, comments, or structural cohesion, the narrower skills (name-for-meaning, use-comments-for-missing-context, design-cohesive-functions, design-cohesive-classes) are more actionable; reach for this one to weigh the overall trade-off."
 license: MIT
 ---
 
@@ -9,10 +9,6 @@ license: MIT
 ## Intent
 
 Optimize code for the future engineer who must understand, debug, modify, review, or extend it rather than only for the author completing today's task.
-
-## Apply when
-
-Use this skill for essentially all non-trivial production code, especially code expected to live for years or cross team boundaries.
 
 ## Procedure
 
@@ -36,17 +32,15 @@ Use this skill for essentially all non-trivial production code, especially code 
 - Leaving known confusion because "it works."
 - Ignoring repository conventions without a concrete reason.
 
+## Exceptions and trade-offs
+
+- A genuine one-off script or throwaway spike does not warrant the same investment — judge by expected lifetime and audience, not as a universal rule.
+- Matching local convention sometimes conflicts with an objectively better pattern; prefer consistency unless the deviation is clearly justified and documented.
+- Optimizing purely for a hypothetical future maintainer can itself produce speculative complexity — the standard is a competent engineer unfamiliar with today's context, not defense against every imaginable future need.
+
 ## Verification
 
 - Can an engineer unfamiliar with the change understand it from source and nearby documentation?
 - Are the important assumptions discoverable?
 - Is the code consistent with established local patterns?
 - Did the change reduce or increase future maintenance effort?
-
-
-## Related skills
-
-- CODE-01 Write Code at the Level of Intent
-- CODE-02 Name for Meaning
-- CODE-12 Use Comments for Missing Context
-- CODE-15 Continuously Improve Code Quality

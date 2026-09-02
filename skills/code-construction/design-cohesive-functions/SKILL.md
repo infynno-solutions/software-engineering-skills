@@ -1,6 +1,6 @@
 ---
 name: design-cohesive-functions
-description: "Give each function a clear, coherent purpose so that its name, interface, control flow, and effects form a consistent abstraction. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Gives a function one coherent purpose so its name, inputs, and effects match. Use when a function has quietly picked up an unrelated side effect under a name suggesting a narrower operation, or when extracting logic from a function that has grown to do several unrelated things. Not when the multi-responsibility problem is at class level (see design-cohesive-classes), when the purpose is clear but the branching is hard to follow (see simplify-conditional-logic), or when splitting existing code mechanically under tests (see extract-and-recompose-responsibilities)."
 license: MIT
 ---
 
@@ -9,16 +9,6 @@ license: MIT
 ## Intent
 
 Give each function a clear, coherent purpose so that its name, interface, control flow, and effects form a consistent abstraction.
-
-## Apply when
-
-Use this skill when:
-
-- creating a new function
-- reviewing a long or unclear function
-- deciding whether to extract a function
-- a function has unrelated branches or multiple responsibilities
-- a function needs flags to select materially different behaviors
 
 ## Procedure
 
@@ -42,6 +32,12 @@ Use this skill when:
 - Extracting trivial one-line wrappers that add no readability or semantic boundary.
 - Splitting code solely to satisfy a numeric line-count rule.
 
+## Exceptions and trade-offs
+
+- Splitting a small, already-clear function purely to reduce line count can add indirection without improving comprehension.
+- A tight algorithmic routine (a numeric kernel, a parser's inner loop) may look "non-cohesive" by naive statement-counting while actually being a single coherent computation — judge by concept, not line count.
+- Extraction that requires threading many parameters through a new function boundary can trade one form of complexity for another; weigh the resulting signature against the readability gained.
+
 ## Verification
 
 - Does the function have one clear reason for existing?
@@ -49,11 +45,3 @@ Use this skill when:
 - Are its parameters coherent and necessary?
 - Are side effects visible and unsurprising?
 - Would extraction make the surrounding code easier to understand?
-
-
-## Related skills
-
-- CODE-02 Name for Meaning
-- CODE-05 Minimize Function and Class Complexity
-- CODE-06 Make Dependencies Explicit
-- CODE-08 Simplify Conditional Logic

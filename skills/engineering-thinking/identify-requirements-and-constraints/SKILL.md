@@ -1,6 +1,6 @@
 ---
 name: identify-requirements-and-constraints
-description: "Make the boundaries of an engineering problem explicit before choosing a solution. The agent should distinguish what the system must do from constraints imposed by the environment and from assumptions that may later change. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Makes the boundaries of a problem explicit, separating what the system must do from environmental constraints and from assumptions that may later change. Use when an acceptance criterion says must be fast or must scale with no number attached, when two quality attributes pull in opposite directions and the design must name which one wins, or when a rate limit, deployment target, or supported browser was assumed but never confirmed. Not when the problem itself is still unclear (see frame-the-problem first), or when requirements are clear and competing designs need comparing (see evaluate-engineering-trade-offs)."
 license: MIT
 ---
 
@@ -11,15 +11,6 @@ license: MIT
 Make the boundaries of an engineering problem explicit before choosing a solution.
 
 The agent should distinguish what the system must do from constraints imposed by the environment and from assumptions that may later change.
-
-## Apply when
-
-Use this skill when:
-
-- a task has incomplete or conflicting requirements
-- an implementation choice depends on performance, reliability, deployment, compatibility, or team constraints
-- a design needs to balance several quality attributes
-- a requirement may be inferred from existing behavior rather than explicitly stated
 
 ## Procedure
 
@@ -46,6 +37,12 @@ Then identify conflicts between constraints.
 - Ignoring operational or deployment constraints until after design.
 - Using vague words such as “fast” or “scalable” without identifying what they mean in context.
 
+## Exceptions and trade-offs
+
+- Not every constraint needs to be surfaced — chasing every conceivable quality attribute for a small change produces an over-specified problem model that nobody reads.
+- Where a constraint genuinely cannot be confirmed in the available time, label it an assumption and proceed rather than blocking on it indefinitely.
+- Conflicting constraints do not always need to be resolved up front — sometimes surfacing the conflict for the requester to arbitrate is the correct outcome of this step.
+
 ## Verification
 
 The agent should produce a concise problem model containing:
@@ -55,10 +52,3 @@ The agent should produce a concise problem model containing:
 - constraints
 - assumptions
 - open questions
-
-
-## Related skills
-
-- ENG-01 Frame the Problem Before Designing the Solution
-- ENG-05 Evaluate Engineering Trade-offs
-- ENG-07 Defer Decisions When Uncertainty Is High

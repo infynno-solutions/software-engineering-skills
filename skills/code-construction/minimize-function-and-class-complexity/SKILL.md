@@ -1,6 +1,6 @@
 ---
 name: minimize-function-and-class-complexity
-description: "Reduce the amount of code and state a developer must mentally track at once while preserving required behavior. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Reduces the branches, nesting, and state a reader must track at once. Use when reviewing a function or class whose branch count or nesting depth has grown past what a reader can hold in mind in one pass. Not when the complexity is specifically in conditional predicates (see simplify-conditional-logic), specifically in state and side effects rather than sheer size (see minimize-state-and-side-effects), or when the unit needs splitting along responsibility lines under tests (see extract-and-recompose-responsibilities)."
 license: MIT
 ---
 
@@ -9,18 +9,6 @@ license: MIT
 ## Intent
 
 Reduce the amount of code and state a developer must mentally track at once while preserving required behavior.
-
-## Apply when
-
-Use this skill when code contains:
-
-- deep nesting
-- many branches
-- large functions or classes
-- complex boolean expressions
-- too much shared state
-- multiple interacting concerns
-- difficult-to-follow control flow
 
 ## Procedure
 
@@ -45,17 +33,15 @@ Use this skill when code contains:
 - Large methods with multiple unrelated decision domains.
 - Clever abstractions whose cognitive cost exceeds their benefit.
 
+## Exceptions and trade-offs
+
+- Essential domain complexity (a tax calculation with genuinely many legal cases) should not be papered over by an artificial split that hides the domain's real shape.
+- A complexity metric like line count or branch count is a proxy, not the goal — a short function using unfamiliar tricks can be harder to follow than a longer, plain one.
+- Extracting helpers purely to satisfy a linter threshold, without a real conceptual boundary behind the split, trades one form of complexity for scattered indirection.
+
 ## Verification
 
 - Can a developer understand one local piece without understanding the entire surrounding system?
 - Is the nominal path obvious?
 - Can independent pieces be reasoned about separately?
 - Has accidental state or indirection been removed?
-
-
-## Related skills
-
-- ENG-04 Manage Essential vs Accidental Complexity
-- CODE-03 Design Cohesive Functions
-- CODE-07 Keep Control Flow Understandable
-- CODE-08 Simplify Conditional Logic

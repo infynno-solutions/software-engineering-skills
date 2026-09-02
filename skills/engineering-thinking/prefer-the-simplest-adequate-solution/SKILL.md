@@ -1,6 +1,6 @@
 ---
 name: prefer-the-simplest-adequate-solution
-description: "Choose a solution that satisfies the actual requirements while introducing as little unnecessary complexity, indirection, and speculative flexibility as practical. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Chooses the solution that satisfies the actual requirements with the least unnecessary indirection and speculative flexibility. Use when choosing between a plain function and a full strategy hierarchy for logic with exactly one implementation today, when a framework or library is proposed for what a few lines of existing-language code would handle, or when a reliability improvement is scoped larger than the failure mode it addresses. Not when several non-trivial alternatives need comparing on cost, risk, and speed (see evaluate-engineering-trade-offs), or when it is unclear whether the complexity is essential or accidental (see manage-essential-vs-accidental-complexity first)."
 license: MIT
 ---
 
@@ -9,17 +9,6 @@ license: MIT
 ## Intent
 
 Choose a solution that satisfies the actual requirements while introducing as little unnecessary complexity, indirection, and speculative flexibility as practical.
-
-## Apply when
-
-Use this skill during:
-
-- design selection
-- architecture proposals
-- abstraction decisions
-- framework selection
-- refactoring plans
-- reliability improvements
 
 ## Procedure
 
@@ -43,6 +32,12 @@ Use this skill during:
 - Premature optimization.
 - “Enterprise” layering that increases navigation without isolating meaningful concerns.
 
+## Exceptions and trade-offs
+
+- "Simplest" is judged against the actual requirements, not against an imagined minimal version that quietly drops a real one — cutting a requirement to look simpler is not a valid simplification.
+- A known near-term requirement (already committed, not merely plausible) can justify a small amount of extra structure now rather than a rewrite in a month.
+- When two designs are close in complexity, prefer the one with a smaller blast radius if it breaks, not just the one with fewer moving parts.
+
 ## Verification
 
 Ask:
@@ -50,10 +45,3 @@ Ask:
 - What requirement justifies each major abstraction or mechanism?
 - Can one or more layers be removed without violating a requirement?
 - Does the extra machinery reduce total lifecycle cost?
-
-
-## Related skills
-
-- ENG-04 Manage Essential vs Accidental Complexity
-- ENG-05 Evaluate Engineering Trade-offs
-- ENG-07 Defer Decisions When Uncertainty Is High

@@ -1,6 +1,6 @@
 ---
 name: name-for-meaning
-description: "Use names that communicate purpose, responsibility, domain meaning, and relevant behavior clearly enough that the reader does not need surrounding implementation to decode them. Use when the engineering task, code review, design change, refactoring, incident, or implementation materially involves this concern."
+description: "Chooses names that communicate purpose and domain meaning without needing the surrounding code. Use when naming a new variable, function, or flag, when renaming a generic or inconsistent symbol, or when a review flags two equivalent concepts named differently across nearby APIs. Not when a good name cannot be found because the unit has no single coherent responsibility, where the real fix is design-cohesive-functions or design-cohesive-classes, and not for top-level folder and module naming (see let-architecture-scream-the-domain)."
 license: MIT
 ---
 
@@ -9,17 +9,6 @@ license: MIT
 ## Intent
 
 Use names that communicate purpose, responsibility, domain meaning, and relevant behavior clearly enough that the reader does not need surrounding implementation to decode them.
-
-## Apply when
-
-Use this skill for:
-
-- variables and constants
-- functions and methods
-- classes and modules
-- public APIs
-- tests
-- flags, states, and identifiers
 
 ## Procedure
 
@@ -44,17 +33,15 @@ Use this skill for:
 - Reusing a variable name for unrelated purposes.
 - Naming based on what a value happens to be today rather than what it means.
 
+## Exceptions and trade-offs
+
+- Extremely short-lived local variables, such as a loop index or a one-line lambda parameter, don't need the same descriptive weight as a long-lived public symbol.
+- Established domain or mathematical vocabulary (`i`, `dx`, `x`/`y`) can be clearer than a verbose "improved" name when the audience already shares that convention.
+- Renaming a widely-used public symbol has a real migration cost; weigh that against the clarity gain, and prefer a deprecation path over a silent rename on a shared API.
+
 ## Verification
 
 - Can the symbol's purpose be inferred without reading its implementation?
 - Does the name describe all important externally visible behavior of a routine?
 - Are equivalent concepts named consistently across the codebase?
 - Does the name expose a weak design or responsibility split?
-
-
-## Related skills
-
-- CODE-01 Write Code at the Level of Intent
-- CODE-03 Design Cohesive Functions
-- CODE-04 Design Cohesive Classes
-- CODE-11 Write for the Maintainer
